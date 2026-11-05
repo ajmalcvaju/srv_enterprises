@@ -258,7 +258,7 @@ export default function Footer() {
           <div className="text-xs uppercase tracking-widest text-slate-300 mb-6 text-center font-bold">
             Authorized Sales & Multi-Brand Engineering Partners (From Official Visiting Card)
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3 sm:gap-3.5 items-center max-w-7xl mx-auto">
             {SUPPORTED_BRANDS.map((b) => (
               <div
                 key={b.name}

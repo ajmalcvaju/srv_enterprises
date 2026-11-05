@@ -628,6 +628,11 @@ export const SUPPORTED_BRANDS: BrandPartner[] = [
     category: "Advanced Purification",
     logoImage: "/images/brand-pureit.png",
   },
+  {
+    name: "Kirloskar",
+    category: "Pumps & Water Engineering",
+    logoImage: "/images/brand-kirloskar.png",
+  },
 ];
 
 export const TESTIMONIALS = [

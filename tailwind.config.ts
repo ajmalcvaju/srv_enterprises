@@ -55,8 +55,14 @@ const config: Config = {
         "slide-up": "slideUp 0.6s ease-out forwards",
         pulse_subtle: "pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         float: "float 6s ease-in-out infinite",
+        marquee: "marquee 30s linear infinite",
+        "marquee-fast": "marquee 20s linear infinite",
       },
       keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
