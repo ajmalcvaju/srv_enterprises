@@ -141,7 +141,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaLink: "/products?category=allied",
     secondaryCtaText: "Get a Free Quote",
     secondaryCtaLink: "#quote",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/hero-modern-living.jpg",
     taglineSecondary: "Inverters, Auto-Clean Chimneys & Food-Grade SS Tanks",
   },
 ];
