@@ -604,11 +604,6 @@ export const SUPPORTED_BRANDS: BrandPartner[] = [
     logoImage: "/images/brand-vguard.png",
   },
   {
-    name: "Kalador",
-    category: "Kitchen & Water Systems",
-    logoImage: "/images/brand-kalador.png",
-  },
-  {
     name: "AquaGuard",
     category: "Water Purifiers",
     logoImage: "/images/brand-aquaguard.png",
