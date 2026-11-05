@@ -115,7 +115,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaLink: "/products?category=solar",
     secondaryCtaText: "Get a Free Quote",
     secondaryCtaLink: "#quote",
-    image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/hero-solar-energy.jpg",
     taglineSecondary: "Save Up To 80% on Water Heating & Energy Bills",
   },
   {
@@ -340,7 +340,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryLabel: "Solar Panels & Heating",
     tagline: "Clean Energy Heating with 5-Year SS Tank Warranty",
     description: "High-efficiency evacuated tube collector solar water heating system. Includes a food-grade stainless steel storage tank and certified installation.",
-    image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hero-solar-energy.jpg",
     features: [
       "High-Absorption German Borosilicate Vacuum Tubes",
       "Food-Grade SS 304 Inner Tank",
