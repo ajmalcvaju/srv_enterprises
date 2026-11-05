@@ -32,7 +32,7 @@ import {
 } from "@/data/siteData";
 
 export default function HomePage() {
-  const featuredProducts = PRODUCTS.filter((p) => p.isPrimary).slice(0, 4);
+  const featuredProducts = PRODUCTS.filter((p) => p.isPrimary);
 
   return (
     <div className="flex flex-col w-full">
@@ -45,35 +45,35 @@ export default function HomePage() {
       {/* 2.5 Official Product Brand Logos from Visiting Card */}
       <BrandShowcase />
 
-      {/* 3. Main Business Categories - Water Purifiers & Water Treatment Plants */}
+      {/* 3. Core Engineering & Product Divisions */}
       <MainCategories />
 
-      {/* 4. Featured Water Solutions Showcase */}
+      {/* 4. Featured Multi-Division Systems Showcase */}
       <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-slate-200">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-slate-200 gap-4">
             <div className="max-w-2xl">
               <span className="text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-3 py-1 rounded-full inline-block mb-3">
-                Flagship Systems
+                Flagship Engineering Systems
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-navy font-heading tracking-tight">
-                Featured Water Purification & Treatment Systems
+                Featured Systems Across All Divisions
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mt-2">
-                Engineered for homes, restaurants, hospitals, and industrial facilities with uncompromised build quality.
+                Water Purifiers, Treatment Plants, Solar Water Heaters, Solar Power, 24/7 CCTV, Power Inverters, Chimneys &amp; SS Tanks installed with certified engineering expertise.
               </p>
             </div>
 
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 text-royal hover:text-navy font-bold text-sm mt-4 md:mt-0 transition-colors"
+              className="inline-flex items-center gap-2 text-royal hover:text-navy font-bold text-sm transition-colors shrink-0"
             >
               <span>Explore Complete Catalog</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -85,7 +85,7 @@ export default function HomePage() {
               href="/products"
               className="inline-flex items-center gap-2 bg-navy hover:bg-royal text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all shadow-md hover:shadow-lg"
             >
-              <span>View All 7 Categories in Product Catalog</span>
+              <span>View All Products in Full Catalog</span>
               <ArrowRight className="w-4 h-4 text-aqua" />
             </Link>
           </div>
@@ -204,21 +204,21 @@ export default function HomePage() {
                 Our Engineering & Installation Services
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mt-2">
-                Certified water treatment plant installation, multi-brand purifier servicing, free water testing, and home fitting works.
+                Certified water treatment, CCTV surveillance, solar energy, inverter wiring, and kitchen chimney installation by certified technicians.
               </p>
             </div>
 
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-royal hover:text-navy font-bold text-sm mt-4 md:mt-0 transition-colors"
+              className="inline-flex items-center gap-2 text-royal hover:text-navy font-bold text-sm mt-4 md:mt-0 transition-colors shrink-0"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {SERVICES.slice(0, 3).map((service) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {SERVICES.slice(0, 6).map((service) => (
               <div
                 key={service.id}
                 className="rounded-3xl p-8 bg-surface-light border border-slate-200/90 hover:border-royal/50 hover:bg-white shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between"

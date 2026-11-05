@@ -8,6 +8,11 @@ import {
   Repeat,
   Droplets,
   Home,
+  Shield,
+  Sun,
+  Zap,
+  Wind,
+  Layers,
   CheckCircle2,
   Phone,
   MessageCircle,
@@ -20,9 +25,9 @@ import { SERVICES, COMPANY_INFO } from "@/data/siteData";
 import WaterTdsCalculator from "@/components/WaterTdsCalculator";
 
 export const metadata: Metadata = {
-  title: "Services | Water Purifiers & Water Treatment Plant Engineering",
+  title: "Services | Water Purifiers, CCTV, Solar, Inverters & Kitchen Engineering",
   description:
-    "Explore our professional services: Water Purifier Installation, Multi-brand Service & AMC, Water Treatment Plant (WTP) Installation, Plant Maintenance, and Free Water Testing in Kerala. 10+ Years of Experience, 10,000+ Customers.",
+    "Explore our professional services: Water Purifier Installation & Multi-Brand AMC, Water Treatment Plants (WTP), 24/7 CCTV Setup, Solar Water Heaters, Solar Power, Inverters & Batteries, and Kitchen Chimneys & Hobs in Kerala. 10+ Years of Experience, 10,000+ Customers.",
 };
 
 export default function ServicesPage() {
@@ -40,6 +45,16 @@ export default function ServicesPage() {
         return Droplets;
       case "Home":
         return Home;
+      case "Shield":
+        return Shield;
+      case "Sun":
+        return Sun;
+      case "Zap":
+        return Zap;
+      case "Wind":
+        return Wind;
+      case "Layers":
+        return Layers;
       default:
         return Wrench;
     }

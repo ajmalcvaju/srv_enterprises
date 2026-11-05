@@ -102,11 +102,11 @@ export default function ProductsPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight">
-            Premium Water & Home Technologies
+            Complete Engineering &amp; Technology Catalog
           </h1>
 
           <p className="mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
-            Giving maximum priority to domestic purifiers and industrial water treatment plants, complemented by solar heaters, CCTV, inverters, chimneys, and SS tanks.
+            Certified Water Purifiers, Industrial Treatment Plants, Solar Water Heaters, Solar Power Plants, 24/7 CCTV Surveillance, Power Inverters, and Auto-Clean Kitchen Chimneys &amp; Hobs.
           </p>
         </div>
       </section>

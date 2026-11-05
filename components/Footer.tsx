@@ -156,15 +156,15 @@ export default function Footer() {
           {/* Core Categories */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-aqua pl-2">
-              Key Solutions
+              Engineering Divisions
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link
                   href="/products?category=purifiers"
                   className="hover:text-aqua transition-colors text-slate-200 font-medium"
                 >
-                  Domestic Water Purifiers
+                  Water Purifiers (Domestic &amp; Commercial)
                 </Link>
               </li>
               <li>
@@ -172,15 +172,7 @@ export default function Footer() {
                   href="/products?category=plants"
                   className="hover:text-aqua transition-colors text-slate-200 font-medium"
                 >
-                  Water Treatment Plants (WTP)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products?category=plants"
-                  className="hover:text-aqua transition-colors"
-                >
-                  Industrial & Commercial RO
+                  Water Treatment Plants (WTP &amp; RO)
                 </Link>
               </li>
               <li>
@@ -188,7 +180,7 @@ export default function Footer() {
                   href="/products?category=solar"
                   className="hover:text-aqua transition-colors"
                 >
-                  Solar Panels & Water Heaters
+                  Solar Water Heaters &amp; Solar Power
                 </Link>
               </li>
               <li>
@@ -196,7 +188,7 @@ export default function Footer() {
                   href="/products?category=cctv"
                   className="hover:text-aqua transition-colors"
                 >
-                  CCTV Surveillance Systems
+                  24/7 CCTV &amp; Security Surveillance
                 </Link>
               </li>
               <li>
@@ -204,7 +196,23 @@ export default function Footer() {
                   href="/products?category=inverters"
                   className="hover:text-aqua transition-colors"
                 >
-                  Inverters, Chimneys & SS Tanks
+                  Inverters &amp; Tubular Batteries
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products?category=chimneys"
+                  className="hover:text-aqua transition-colors"
+                >
+                  Electric Chimneys &amp; Built-In Hobs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products?category=tanks"
+                  className="hover:text-aqua transition-colors"
+                >
+                  SS Water Tanks &amp; Copper Piping
                 </Link>
               </li>
             </ul>

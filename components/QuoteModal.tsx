@@ -166,13 +166,22 @@ export default function QuoteModal({
                     Multi-Brand Purifier Repair / AMC
                   </option>
                   <option value="Solar Water Heater with SS Tank">
-                    Solar Water Heater with SS Tank
+                    Solar Water Heater with SS Tank (5-Yr Warranty)
                   </option>
-                  <option value="CCTV Security Camera Setup">
-                    CCTV Security Camera Setup
+                  <option value="Rooftop Solar Power System">
+                    Rooftop Solar Power System (On-Grid / Off-Grid)
                   </option>
-                  <option value="Inverter, Electric Chimney or Allied Service">
-                    Inverter, Electric Chimney or Allied Service
+                  <option value="24/7 CCTV Security Surveillance Package">
+                    24/7 CCTV Security Surveillance Package
+                  </option>
+                  <option value="Inverter & Heavy-Duty Tubular Battery Backup">
+                    Inverter &amp; Heavy-Duty Tubular Battery Backup
+                  </option>
+                  <option value="Auto-Clean Kitchen Chimney & Gas Hob">
+                    Auto-Clean Kitchen Chimney &amp; Gas Hob
+                  </option>
+                  <option value="Food-Grade SS Water Tank & Copper Piping">
+                    Food-Grade SS Water Tank &amp; Copper Piping
                   </option>
                   <option value="Free Water Testing Request">
                     Free Water Quality Testing Request

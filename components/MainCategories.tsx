@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import {
@@ -7,236 +9,252 @@ import {
   Shield,
   Zap,
   Wind,
+  Layers,
   Box,
   ArrowRight,
   CheckCircle,
   Sparkles,
+  Award,
 } from "lucide-react";
 
 export default function MainCategories() {
-  const secondaryProducts = [
+  const divisions = [
     {
-      title: "Solar Panels & Heaters",
-      desc: "Evacuated tube solar water heaters with 5-year warranty SS tanks.",
-      icon: Sun,
-      category: "solar",
-      badge: "Save Electricity",
+      id: "purifiers",
+      number: "01",
+      badge: "Flagship Purification",
+      title: "Water Purifiers (Domestic & Commercial)",
+      shortDesc:
+        "Premium multi-stage reverse osmosis, ultraviolet, and ultrafiltration systems designed for cleaner, safer, and better-tasting drinking water.",
+      image: "/images/hero-water-purifier.png",
+      tagline: "Multi-Stage RO + UV + UF + Alkaline Mineral Enrichment",
+      features: [
+        "7,500+ Domestic installations across Wayanad & Calicut",
+        "Engineered for high TDS borewell water and municipal supply",
+        "Authorized sales & service for Kent, AquaGuard, Pureit & Royal Waterman",
+      ],
+      link: "/products?category=purifiers",
+      ctaText: "Explore Water Purifiers",
+      gradient: "from-blue-600/10 via-royal/5 to-transparent",
+      accentColor: "text-royal",
     },
     {
-      title: "CCTV Cameras",
-      desc: "24/7 HD night-vision surveillance for homes and commercial establishments.",
-      icon: Shield,
-      category: "cctv",
-      badge: "24/7 Security",
+      id: "plants",
+      number: "02",
+      badge: "Turnkey Heavy Engineering",
+      title: "Water Treatment Plants (WTP & RO Plants)",
+      shortDesc:
+        "Custom-fabricated residential whole-house filtration vessels and heavy-duty commercial/industrial water treatment plants for resorts, hospitals & institutions.",
+      image: "/images/1000-lph-ro-plant.jpg",
+      tagline: "Capacities from 250 LPH to 10,000+ Liters Per Hour",
+      features: [
+        "Chemical-free FRP iron removal filtration (removes rust stains & odor)",
+        "Automatic ion-exchange water softeners for hard borewell water",
+        "Turnkey fabrication, commissioning, media refills & factory AMC support",
+      ],
+      link: "/products?category=plants",
+      ctaText: "Explore Treatment Plants",
+      gradient: "from-cyan-600/10 via-aqua/5 to-transparent",
+      accentColor: "text-cyan-700",
     },
     {
-      title: "Inverters & Batteries",
-      desc: "Pure sine wave high-capacity backup systems with safe home installation.",
-      icon: Zap,
-      category: "inverters",
-      badge: "Uninterrupted",
+      id: "solar",
+      number: "03",
+      badge: "Renewable Clean Energy",
+      title: "Solar Water Heaters & Solar Power Systems",
+      shortDesc:
+        "Harness Kerala's abundant solar energy. High-efficiency evacuated tube solar water heaters with food-grade SS tanks and rooftop solar power plants.",
+      image: "/images/hero-solar-energy.jpg",
+      tagline: "Save Up To 80% on Water Heating & Domestic Electricity Bills",
+      features: [
+        "High-absorption German vacuum tube solar water heaters",
+        "Food-Grade Stainless Steel (SS 304/316) tanks with 5-Year Warranty",
+        "Rooftop On-Grid & Off-Grid Solar Power with KSEB Net Metering support",
+      ],
+      link: "/products?category=solar",
+      ctaText: "Explore Solar Solutions",
+      gradient: "from-amber-500/10 via-yellow-500/5 to-transparent",
+      accentColor: "text-amber-600",
     },
     {
-      title: "Electric Chimneys",
-      desc: "Auto-clean suction kitchen chimneys with precision granite cut & fit.",
-      icon: Wind,
-      category: "chimneys",
-      badge: "Modern Kitchen",
+      id: "cctv",
+      number: "04",
+      badge: "24/7 Smart Security",
+      title: "24/7 CCTV & Security Surveillance",
+      shortDesc:
+        "High-definition ColorVu night-vision security cameras with digital video recorders, motion detection alerts, and intelligent smartphone remote monitoring.",
+      image: "/images/hero-cctv-security.jpg",
+      tagline: "Authorized Hikvision, Dahua & CP Plus HD Surveillance",
+      features: [
+        "24/7 Full-Color night vision dome, bullet & 360° motorized PTZ cameras",
+        "Live smartphone and tablet streaming from anywhere in the world",
+        "Aesthetic concealed cabling, outdoor weatherproof housing & 2-year warranty",
+      ],
+      link: "/products?category=cctv",
+      ctaText: "Explore CCTV Packages",
+      gradient: "from-emerald-600/10 via-teal-500/5 to-transparent",
+      accentColor: "text-emerald-700",
     },
     {
-      title: "SS Water Tanks",
-      desc: "Food-grade stainless steel 304/316 tanks with 5-year replacement warranty.",
-      icon: Box,
-      category: "tanks",
-      badge: "Hygienic Grade",
+      id: "inverters",
+      number: "05",
+      badge: "Uninterrupted Power",
+      title: "Inverters & Heavy-Duty Tubular Batteries",
+      shortDesc:
+        "Pure sine wave digital inverters paired with heavy-duty deep-cycle tubular batteries to keep your home lights, fans, purifiers, and IT running seamlessly.",
+      image: "/images/product-inverter-battery.jpg",
+      tagline: "Instant Millisecond Automatic Power Switchover",
+      features: [
+        "Pure sine wave output safe for sensitive electronics & medical devices",
+        "Long-life deep-cycle tubular batteries (V-Guard & leading Tier-1 brands)",
+        "Accurate electrical load calculation, panel wiring & safe battery rack setup",
+      ],
+      link: "/products?category=inverters",
+      ctaText: "Explore Inverter Systems",
+      gradient: "from-indigo-600/10 via-purple-500/5 to-transparent",
+      accentColor: "text-indigo-700",
+    },
+    {
+      id: "chimneys",
+      number: "06",
+      badge: "Modern Kitchen Engineering",
+      title: "Electric Chimneys, Built-In Hobs & Copper Piping",
+      shortDesc:
+        "Smoke-free, odor-free kitchen ventilation. Thermal auto-clean curved glass chimneys, toughened glass gas hobs, and architectural copper piping lines.",
+      image: "/images/product-chimney-hob.jpg",
+      tagline: "Thermal Auto-Clean & 1500 m³/hr High Suction Power",
+      features: [
+        "Faber & top-brand motion sensor gesture-controlled auto-clean chimneys",
+        "Diamond core drilling for exhaust ducting without wall or tile cracks",
+        "Precision granite kitchen slab cutting for built-in gas stove hobs",
+      ],
+      link: "/products?category=chimneys",
+      ctaText: "Explore Kitchen Appliances",
+      gradient: "from-rose-600/10 via-orange-500/5 to-transparent",
+      accentColor: "text-rose-700",
     },
   ];
 
   return (
-    <section className="py-20 bg-surface-light relative overflow-hidden">
+    <section className="py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal/10 text-royal text-xs font-bold uppercase tracking-wider mb-3">
-            <Droplets className="w-4 h-4 text-royal" />
-            <span>Core Engineering Focus</span>
+            <Sparkles className="w-4 h-4 text-royal" />
+            <span>Complete Home, Commercial &amp; Industrial Engineering</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy font-heading tracking-tight">
-            Complete Water Solutions for Every Need
+            Our Core Engineering &amp; Product Divisions
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            Engineered purity for both individual residences and large-scale commercial facilities,
-            backed by over 10 years of trusted expertise and 10,000+ satisfied clients.
+            From pure drinking water and heavy-duty treatment plants to solar energy, 24/7 CCTV security, power backup inverters, and modern kitchen automation—SRV ENTERPRISES delivers complete turnkey solutions backed by 10+ years of trust.
           </p>
         </div>
 
-        {/* 2 Primary Categories: High Visual Prominence */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Primary 1: Water Purifiers */}
-          <div className="relative group rounded-3xl bg-white border border-slate-200/80 hover:border-royal/50 shadow-card hover:shadow-elevated transition-all duration-300 overflow-hidden flex flex-col justify-between">
-            <div className="p-8 sm:p-10">
-              <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-royal bg-royal/10 px-3.5 py-1 rounded-full uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-royal" /> Primary Focus 01
-                </span>
-                <span className="text-xs font-semibold text-slate-500">
-                  Domestic & Commercial
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-navy font-heading mb-3 group-hover:text-royal transition-colors">
-                Water Purifiers
-              </h3>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
-                Premium multi-stage reverse osmosis, ultraviolet, and ultrafiltration systems designed for cleaner, safer, and better-tasting water. Engineered to handle high TDS borewell water and municipal supplies.
-              </p>
-
-              <div className="space-y-2.5 mb-8">
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>Multi-Stage RO + UV + UF + Mineral alkaline enrichment</span>
+        {/* 6 Core Divisions Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {divisions.map((div) => (
+            <div
+              key={div.id}
+              className="group bg-white rounded-3xl border border-slate-200/90 hover:border-royal/50 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between overflow-hidden"
+            >
+              <div>
+                {/* Visual Image Header */}
+                <div className="relative h-56 sm:h-64 w-full bg-slate-100 overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-t ${div.gradient} z-10 pointer-events-none`} />
+                  <img
+                    src={div.image}
+                    alt={div.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  {/* Top Badges */}
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="bg-navy/90 backdrop-blur-md text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider border border-white/20">
+                      Division {div.number}
+                    </span>
+                  </div>
+                  <div className="absolute top-4 right-4 z-20">
+                    <span className="bg-white/95 backdrop-blur-md text-navy text-[11px] font-extrabold px-3 py-1 rounded-full shadow-sm border border-slate-200">
+                      {div.badge}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>Free doorstep water testing & exchange facilities</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>Multi-brand service for Kent, Aquaguard, Pure Drops, etc.</span>
-                </div>
-              </div>
 
-              <Link
-                href="/products?category=purifiers"
-                className="inline-flex items-center gap-2 bg-navy hover:bg-royal text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-md group-hover:gap-3"
-              >
-                <span>Explore Purifiers</span>
-                <ArrowRight className="w-4 h-4 text-aqua" />
-              </Link>
-            </div>
+                {/* Content Area */}
+                <div className="p-6 sm:p-7">
+                  <div className="text-xs font-bold text-royal uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-royal" />
+                    <span>{div.tagline}</span>
+                  </div>
 
-            {/* Visual Image Banner */}
-            <div className="h-64 sm:h-72 bg-gradient-to-t from-slate-100 to-white relative p-6 flex items-center justify-center border-t border-slate-100 overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(#1265A8_1px,transparent_1px)] [background-size:20px_20px] opacity-10" />
-              <img
-                src="/images/hero-water-purifier.png"
-                alt="SRV Water Purifiers"
-                className="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500 drop-shadow-xl"
-              />
-            </div>
-          </div>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-navy font-heading mb-3 group-hover:text-royal transition-colors leading-snug">
+                    {div.title}
+                  </h3>
 
-          {/* Primary 2: Water Treatment Plants */}
-          <div className="relative group rounded-3xl bg-gradient-to-br from-navy-900 to-navy-800 text-white border border-navy-700 hover:border-aqua/50 shadow-elevated transition-all duration-300 overflow-hidden flex flex-col justify-between">
-            {/* Corner Badge */}
-            <div className="absolute top-6 right-6 bg-aqua text-navy-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider shadow-glow">
-              Engineered Excellence
-            </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+                    {div.shortDesc}
+                  </p>
 
-            <div className="p-8 sm:p-10">
-              <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-aqua bg-aqua/10 px-3.5 py-1 rounded-full uppercase tracking-wider">
-                  <Cpu className="w-3.5 h-3.5 text-aqua" /> Primary Focus 02
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-heading mb-3 group-hover:text-aqua transition-colors">
-                Water Treatment Plants
-              </h3>
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
-                Turn-key residential whole-house filtration and large commercial / industrial water treatment plants. Chemical-free solutions for severe iron rust, water discoloration, mud, hardness, and high TDS.
-              </p>
-
-              <div className="space-y-2.5 mb-8">
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle className="w-4 h-4 text-aqua shrink-0" />
-                  <span>Capacities from 250 LPH to 10,000+ Liters Per Hour</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle className="w-4 h-4 text-aqua shrink-0" />
-                  <span>Whole-house iron removal FRP vessels without chemicals</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle className="w-4 h-4 text-aqua shrink-0" />
-                  <span>Full turnkey fabrication, commissioning, and AMC support</span>
+                  {/* Bullet Highlights */}
+                  <div className="space-y-2 pt-2 border-t border-slate-100">
+                    {div.features.map((feat, fIdx) => (
+                      <div key={fIdx} className="flex items-start gap-2 text-xs text-slate-700">
+                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="leading-tight">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <Link
-                href="/products?category=plants"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-royal group-hover:gap-3"
-              >
-                <span>Explore Treatment Plants</span>
-                <ArrowRight className="w-4 h-4 text-navy-950" />
-              </Link>
+              {/* Action Button at bottom */}
+              <div className="p-6 pt-0">
+                <Link
+                  href={div.link}
+                  className="w-full inline-flex items-center justify-between bg-slate-50 group-hover:bg-royal text-navy group-hover:text-white font-bold py-3 px-5 rounded-2xl text-xs sm:text-sm border border-slate-200 group-hover:border-royal transition-all duration-300 shadow-sm"
+                >
+                  <span>{div.ctaText}</span>
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
-
-            {/* Visual Image Banner */}
-            <div className="h-64 sm:h-72 bg-navy-950/70 relative p-6 flex items-center justify-center border-t border-white/10 overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(#36C6D9_1px,transparent_1px)] [background-size:20px_20px] opacity-10" />
-              <img
-                src="/images/1000-lph-ro-plant.jpg"
-                alt="SRV Water Treatment Plant"
-                className="max-h-full object-contain rounded-xl transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
-              />
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Additional Products Section */}
-        <div className="mt-16">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-slate-200">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">
-                Integrated Offerings
+        {/* Specialized Architectural Infrastructure Bar */}
+        <div className="bg-navy rounded-3xl p-6 sm:p-8 text-white shadow-elevated border border-navy-700/80">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <span className="text-[11px] font-black uppercase tracking-widest text-aqua bg-aqua/10 px-3 py-1 rounded-full border border-aqua/20 inline-block mb-2">
+                Allied Architectural Solutions
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-navy font-heading mt-1">
-                Additional Modern Living Solutions
+              <h3 className="text-xl sm:text-2xl font-extrabold font-heading text-white">
+                Food-Grade SS Tanks &amp; Concealed Copper Piping
               </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                Replace unhygienic plastic storage with food-grade SS 304/316 water tanks backed by a <strong>5-Year Replacement Warranty</strong>, coupled with heavy-gauge seamless copper pipeline routing for kitchen gas, RO systems, and villas.
+              </p>
             </div>
-            <Link
-              href="/products"
-              className="text-xs sm:text-sm font-bold text-royal hover:text-navy flex items-center gap-1.5 mt-2 sm:mt-0"
-            >
-              <span>View All Products in Catalog</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-            {secondaryProducts.map((p) => {
-              const Icon = p.icon;
-              return (
-                <Link
-                  key={p.title}
-                  href={`/products?category=${p.category}`}
-                  className="group bg-white rounded-2xl p-5 border border-slate-200/90 hover:border-royal/40 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-royal/10 text-royal flex items-center justify-center transition-colors">
-                        <Icon className="w-5 h-5 text-royal" />
-                      </div>
-                      <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">
-                        {p.badge}
-                      </span>
-                    </div>
-
-                    <h4 className="font-bold text-navy text-sm font-heading group-hover:text-royal transition-colors mb-1.5">
-                      {p.title}
-                    </h4>
-                    <p className="text-xs text-slate-500 leading-relaxed">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center text-xs font-semibold text-royal group-hover:text-navy transition-colors">
-                    <span>Explore</span>
-                    <ArrowRight className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              );
-            })}
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Link
+                href="/products?category=tanks"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-5 py-3 rounded-xl text-xs sm:text-sm shadow-royal hover:shadow-glow transition-all"
+              >
+                <span>View SS Tanks &amp; Piping</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="https://wa.me/918593882776?text=Hello%20SRV%20Enterprises,%20I%20am%20interested%20in%20SS%20Water%20Tanks%20and%20Copper%20Piping."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-4 py-3 rounded-xl text-xs sm:text-sm border border-white/20 transition-all"
+              >
+                <span>Quick WhatsApp Inquiry</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

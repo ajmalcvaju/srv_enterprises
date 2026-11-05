@@ -29,22 +29,32 @@ export default function AboutPage() {
   const galleryItems = [
     {
       title: "Commercial RO Water Treatment Plant (1000 LPH)",
-      caption: "Turn-key installation for resorts and institutions in Wayanad",
+      caption: "Turn-key skid installation for resorts and commercial institutions in Wayanad",
       image: "/images/1000-lph-ro-plant.jpg",
     },
     {
-      title: "Domestic RO+UV+UF Digital Purification System",
-      caption: "Wave Krystal series installed in contemporary Kerala home",
-      image: "/images/wave-krystal-digital.webp",
+      title: "Domestic Multi-Stage Alkaline RO Purifier",
+      caption: "Multi-stage RO+UV+UF purification installed in modern Kerala residence",
+      image: "/images/hero-water-purifier.png",
     },
     {
-      title: "Whole-House FRP Media Filtration Vessel",
-      caption: "Natural chemical-free iron and mud elimination setup",
-      image: "/images/frp-vessel-media-filter.png",
+      title: "Rooftop Solar Water Heater & Solar Power Plant",
+      caption: "Evacuated tube solar collector with 5-year warranty SS storage tank",
+      image: "/images/hero-solar-energy.jpg",
     },
     {
-      title: "Pure Drops & Multi-Brand Technology Showroom",
-      caption: "Our official service & display center in Sultan Bathery",
+      title: "24/7 Smart CCTV Security & Remote Monitoring",
+      caption: "Hikvision & Dahua HD night-vision cameras with mobile live surveillance",
+      image: "/images/hero-cctv-security.jpg",
+    },
+    {
+      title: "Pure Sine Wave Inverter & Auto-Clean Kitchen Chimney",
+      caption: "Uninterrupted home power backup and Faber auto-clean chimney ducting",
+      image: "/images/hero-modern-living.jpg",
+    },
+    {
+      title: "Technology Display & Service Showroom",
+      caption: "Our official customer experience & sales center in Sultan Bathery",
       image: "/images/purifier-showroom.png",
     },
   ];

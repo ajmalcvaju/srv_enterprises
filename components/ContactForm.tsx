@@ -241,11 +241,20 @@ export default function ContactForm() {
               <option value="Solar Water Heater with SS Tank (5-Yr Warranty Offer)">
                 Solar Water Heater with SS Tank (5-Yr Warranty Offer)
               </option>
-              <option value="CCTV Camera Surveillance System">
-                CCTV Camera Surveillance System
+              <option value="Rooftop Solar Power System (On-Grid / Off-Grid)">
+                Rooftop Solar Power System (On-Grid / Off-Grid)
               </option>
-              <option value="Inverter, Electric Chimney or SS Tank">
-                Inverter, Electric Chimney or SS Tank
+              <option value="24/7 CCTV Camera Surveillance Package">
+                24/7 CCTV Camera Surveillance Package
+              </option>
+              <option value="Inverter & Heavy-Duty Tubular Battery Backup">
+                Inverter &amp; Heavy-Duty Tubular Battery Backup
+              </option>
+              <option value="Auto-Clean Kitchen Chimney & Gas Hob">
+                Auto-Clean Kitchen Chimney &amp; Gas Hob
+              </option>
+              <option value="Food-Grade SS Water Tank & Copper Piping">
+                Food-Grade SS Water Tank &amp; Copper Piping
               </option>
             </select>
           </div>
