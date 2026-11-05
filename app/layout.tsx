@@ -57,6 +57,14 @@ export const metadata: Metadata = {
       "10+ Years of Experience, 10,000+ Customers. Water Purifiers, RO Plants, Solar Water Heaters, and CCTV in Kerala.",
     images: ["/images/srv-notice-brochure.webp"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   robots: {
     index: true,
     follow: true,
