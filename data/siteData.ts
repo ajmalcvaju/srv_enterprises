@@ -128,7 +128,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaLink: "/products?category=cctv",
     secondaryCtaText: "Get a Free Quote",
     secondaryCtaLink: "#quote",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/hero-cctv-security.jpg",
     taglineSecondary: "Hikvision, Dahua & CP Plus HD Surveillance Systems",
   },
   {
@@ -361,7 +361,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryLabel: "CCTV Cameras",
     tagline: "Uncompromised 24-Hour Security for Home & Office",
     description: "Full-color day/night surveillance cameras with high-grade DVR/NVR, motion alerts, mobile remote monitoring, and neat concealed cabling.",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hero-cctv-security.jpg",
     features: [
       "HD / 2K Night-Vision Dome & Bullet Cameras",
       "Weatherproof IP67 Metal Housing",
