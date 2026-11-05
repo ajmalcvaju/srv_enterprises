@@ -5,6 +5,8 @@ export interface CompanyInfo {
   subTagline: string;
   experienceYears: number;
   customersCount: number;
+  domesticCustomers: number;
+  commercialCustomers: number;
   phone: string;
   displayPhone: string;
   whatsapp: string;
@@ -31,6 +33,8 @@ export const COMPANY_INFO: CompanyInfo = {
   subTagline: "Advanced Water Purification & Treatment Solutions",
   experienceYears: 10,
   customersCount: 10000,
+  domesticCustomers: 7500,
+  commercialCustomers: 2500,
   phone: "+918593882776",
   displayPhone: "+91 85938 82776",
   whatsapp: "918593882776",

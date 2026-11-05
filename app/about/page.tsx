@@ -112,25 +112,25 @@ export default function AboutPage() {
                 10,000+
               </div>
               <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Happy Customers
+                Total Happy Customers
               </div>
             </div>
 
             <div className="p-4 border-r border-navy-700/60 last:border-0">
               <div className="text-3xl sm:text-4xl font-black text-white font-heading">
-                100%
+                7,500+
               </div>
               <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Chemical-Free Filtration
+                Domestic Households
               </div>
             </div>
 
             <div className="p-4">
               <div className="text-3xl sm:text-4xl font-black text-white font-heading">
-                24/7
+                2,500+
               </div>
               <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Security & Solar Expertise
+                Commercial Clients
               </div>
             </div>
           </div>

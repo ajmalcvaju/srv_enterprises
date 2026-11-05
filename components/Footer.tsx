@@ -47,8 +47,11 @@ export default function Footer() {
                 <div className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
                   10,000+
                 </div>
-                <div className="text-xs text-slate-300 uppercase tracking-wider font-semibold">
-                  Trusted Residential & Business Customers
+                <div className="text-xs text-slate-300 font-semibold">
+                  Trusted Customers
+                </div>
+                <div className="text-[11px] text-aqua">
+                  7,500+ Domestic | 2,500+ Commercial
                 </div>
               </div>
             </div>
@@ -86,7 +89,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-slate-300 leading-relaxed pr-4">
-              With <strong>10+ Years of Experience</strong> and over <strong>10,000+ Satisfied Customers</strong>,
+              With <strong>10+ Years of Experience</strong> and over <strong>10,000+ Satisfied Customers</strong> (comprising <strong>7,500+ domestic</strong> households and <strong>2,500+ commercial</strong> installations),
               SRV ENTERPRISES delivers industry-leading domestic & commercial water purification,
               heavy-duty water treatment plants (WTP/RO), solar systems, and allied modern living installations.
             </p>

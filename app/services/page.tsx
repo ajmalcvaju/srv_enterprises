@@ -103,9 +103,14 @@ export default function ServicesPage() {
             <span className="hidden sm:inline text-white/30 text-xl font-light">|</span>
             <div className="flex items-center gap-3">
               <Users className="w-6 h-6 text-aqua" />
-              <span className="text-lg sm:text-xl font-extrabold text-white font-heading">
-                10,000+ Customers
-              </span>
+              <div className="flex flex-col">
+                <span className="text-lg sm:text-xl font-extrabold text-white font-heading">
+                  10,000+ Satisfied Customers
+                </span>
+                <span className="text-xs text-aqua font-semibold">
+                  7,500+ Domestic • 2,500+ Commercial
+                </span>
+              </div>
             </div>
           </div>
         </div>

@@ -129,7 +129,7 @@ export default function HomePage() {
                 10,000+ Satisfied Customers
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Trusted by thousands of families, resorts, schools, and hospitals across Sultan Bathery, Wayanad, and adjoining regions.
+                Trusted by <strong>7,500+ domestic households</strong> for pure drinking water and <strong>2,500+ commercial clients</strong> (resorts, hotels, hospitals & institutions) across Kerala.
               </p>
             </div>
 
