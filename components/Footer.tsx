@@ -74,17 +74,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-royal to-aqua flex items-center justify-center text-white shadow-royal">
-                <Droplets className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-white font-heading">
-                  SRV <span className="text-aqua">ENTERPRISES</span>
-                </span>
-                <span className="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">
-                  {COMPANY_INFO.tagline}
-                </span>
+            <Link href="/" className="inline-block group">
+              <div className="bg-white px-3.5 py-2 rounded-2xl shadow-elevated border border-white/20 transition-all group-hover:scale-105 inline-flex items-center justify-center">
+                <img
+                  src={COMPANY_INFO.logoUrl}
+                  alt="SRV ENTERPRISES Sales & Service"
+                  className="h-11 sm:h-12 w-auto object-contain"
+                />
               </div>
             </Link>
 
@@ -93,6 +89,11 @@ export default function Footer() {
               SRV ENTERPRISES delivers industry-leading domestic & commercial water purification,
               heavy-duty water treatment plants (WTP/RO), solar systems, and allied modern living installations.
             </p>
+
+            <div className="text-xs text-slate-400 space-y-1">
+              <div><strong className="text-slate-300">GSTIN:</strong> <span className="font-mono text-aqua">{COMPANY_INFO.gstin}</span></div>
+              <div><strong className="text-slate-300">Branches:</strong> {COMPANY_INFO.branches.join(" • ")}</div>
+            </div>
 
             <div className="flex flex-wrap gap-2 pt-2">
               <span className="inline-flex items-center gap-1 text-xs bg-navy-800/80 text-aqua px-3 py-1 rounded-full border border-navy-700">
@@ -252,19 +253,29 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Supported Brands Bar */}
+        {/* Supported Brands Bar with Real Logos */}
         <div className="pt-8 pb-10 border-t border-navy-800">
-          <div className="text-xs uppercase tracking-widest text-slate-400 mb-4 text-center font-semibold">
-            Authorized Sales & Multi-Brand Service Excellence
+          <div className="text-xs uppercase tracking-widest text-slate-300 mb-6 text-center font-bold">
+            Authorized Sales & Multi-Brand Engineering Partners (From Official Visiting Card)
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 items-center max-w-6xl mx-auto">
             {SUPPORTED_BRANDS.map((b) => (
-              <span
+              <div
                 key={b.name}
-                className="bg-navy-900/90 hover:bg-navy-800 border border-navy-700/60 px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-300 transition-colors"
+                className="bg-white rounded-xl p-2.5 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center h-20 transition-all hover:scale-105"
+                title={`${b.name} - ${b.category}`}
               >
-                {b.name}
-              </span>
+                <div className="h-9 w-full flex items-center justify-center">
+                  <img
+                    src={b.logoImage}
+                    alt={b.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <span className="text-[10px] font-bold text-navy mt-1 truncate w-full">
+                  {b.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>

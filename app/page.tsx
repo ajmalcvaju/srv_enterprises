@@ -23,6 +23,7 @@ import MainCategories from "@/components/MainCategories";
 import WaterTroubleshooter from "@/components/WaterTroubleshooter";
 import NoticeShowcase from "@/components/NoticeShowcase";
 import ProductCard from "@/components/ProductCard";
+import BrandShowcase from "@/components/BrandShowcase";
 import {
   COMPANY_INFO,
   PRODUCTS,
@@ -40,6 +41,9 @@ export default function HomePage() {
 
       {/* 2. Trust and Achievement Section - 10+ Years & 10,000+ Customers */}
       <StatsSection />
+
+      {/* 2.5 Official Product Brand Logos from Visiting Card */}
+      <BrandShowcase />
 
       {/* 3. Main Business Categories - Water Purifiers & Water Treatment Plants */}
       <MainCategories />

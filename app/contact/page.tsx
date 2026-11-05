@@ -117,17 +117,40 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-navy text-sm font-heading mb-1">
-                      Helpline & Technical Phone
+                      Helpline & Contact Numbers
                     </h3>
-                    <a
-                      href={`tel:${COMPANY_INFO.phone}`}
-                      className="text-sm font-bold text-royal hover:underline block"
-                    >
-                      {COMPANY_INFO.displayPhone}
-                    </a>
-                    <span className="text-xs text-slate-500">
-                      Direct line to certified service technicians
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                      {COMPANY_INFO.additionalPhones.map((ph, idx) => (
+                        <a
+                          key={idx}
+                          href={`tel:${ph.replace(/\s+/g, "")}`}
+                          className="text-sm font-bold text-royal hover:underline"
+                        >
+                          {ph}
+                        </a>
+                      ))}
+                    </div>
+                    <span className="text-xs text-slate-500 mt-1 block">
+                      Direct lines to Sultan Bathery customer desk & engineering team
                     </span>
+                  </div>
+                </div>
+
+                {/* Branches & GSTIN Card */}
+                <div className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-soft flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-navy text-sm font-heading mb-1">
+                      Branch Network & Tax Registration
+                    </h3>
+                    <div className="text-xs text-slate-700 leading-relaxed">
+                      <strong>Branches:</strong> {COMPANY_INFO.branches.join(" • ")}
+                    </div>
+                    <div className="text-xs text-slate-700 mt-1">
+                      <strong>GSTIN:</strong> <span className="font-mono text-royal font-bold">{COMPANY_INFO.gstin}</span>
+                    </div>
                   </div>
                 </div>
 

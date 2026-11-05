@@ -50,15 +50,19 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-1.5 text-aqua font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-aqua" />
-              <span>10+ Years of Experience | 10,000+ Satisfied Customers</span>
+              <span>10+ Years • 10,000+ Customers (7,500+ Domestic | 2,500+ Commercial)</span>
             </div>
-            <div className="flex items-center gap-1.5 text-slate-300">
-              <MapPin className="w-3.5 h-3.5 text-aqua" />
-              <span>EKM Building, Sultan Bathery, Wayanad</span>
+            <div className="hidden lg:flex items-center gap-1.5 text-slate-300">
+              <span className="text-slate-400">GSTIN:</span>
+              <span className="text-white font-mono font-semibold">{COMPANY_INFO.gstin}</span>
             </div>
           </div>
 
           <div className="flex items-center gap-5">
+            <div className="hidden xl:flex items-center gap-1.5 text-slate-300 text-[11px]">
+              <MapPin className="w-3 h-3 text-aqua" />
+              <span>Sulthan Bathery • Mananthavady • Kalpetta • Dubai</span>
+            </div>
             <a
               href={`tel:${COMPANY_INFO.phone}`}
               className="flex items-center gap-1.5 hover:text-aqua transition-colors text-white font-medium"
@@ -90,17 +94,21 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo from Visiting Card */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-royal to-aqua flex items-center justify-center shadow-royal text-white group-hover:scale-105 transition-transform">
-              <Droplets className="w-6 h-6 text-white" />
+            <div className="bg-white px-3 py-1.5 rounded-xl shadow-md border border-white/20 transition-all group-hover:scale-[1.02] flex items-center justify-center">
+              <img
+                src={COMPANY_INFO.logoUrl}
+                alt="SRV ENTERPRISES - Sales & Service"
+                className="h-9 sm:h-11 w-auto object-contain"
+              />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-white font-heading leading-tight">
-                SRV <span className="text-aqua">ENTERPRISES</span>
+            <div className="hidden sm:flex flex-col">
+              <span className="text-xs font-black tracking-wide text-white uppercase font-heading">
+                SRV ENTERPRISES
               </span>
-              <span className="text-[10px] sm:text-xs text-slate-300 tracking-wider uppercase font-semibold">
-                Water & Home Technologies
+              <span className="text-[10px] text-aqua tracking-wider uppercase font-semibold">
+                Sales & Service • Wayanad
               </span>
             </div>
           </Link>

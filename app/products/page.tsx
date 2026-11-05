@@ -18,6 +18,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import BrandShowcase from "@/components/BrandShowcase";
 import { PRODUCTS, ProductItem, COMPANY_INFO } from "@/data/siteData";
 
 export default function ProductsPage() {
@@ -212,6 +213,9 @@ export default function ProductsPage() {
           )}
         </div>
       </section>
+
+      {/* 3.5 Official Brand Partners Showcase */}
+      <BrandShowcase />
 
       {/* 4. Product Details Modal */}
       {modalProduct && (

@@ -9,6 +9,9 @@ export interface CompanyInfo {
   commercialCustomers: number;
   phone: string;
   displayPhone: string;
+  additionalPhones: string[];
+  gstin: string;
+  branches: string[];
   whatsapp: string;
   whatsappDisplay: string;
   email: string;
@@ -24,19 +27,24 @@ export interface CompanyInfo {
   };
   crmUrl: string;
   workingHours: string;
+  logoUrl: string;
+  logoCardUrl: string;
 }
 
 export const COMPANY_INFO: CompanyInfo = {
   name: "SRV ENTERPRISES",
   shortName: "SRV",
   tagline: "Pure Water. Better Living.",
-  subTagline: "Advanced Water Purification & Treatment Solutions",
+  subTagline: "Sales & Service - Water Purifiers & Water Treatment Plants",
   experienceYears: 10,
   customersCount: 10000,
   domesticCustomers: 7500,
   commercialCustomers: 2500,
   phone: "+918593882776",
   displayPhone: "+91 85938 82776",
+  additionalPhones: ["+91 85938 82776", "+91 99618 92278", "+91 75590 39104"],
+  gstin: "32BTWJP14566QIZP",
+  branches: ["Sulthan Bathery", "Mananthavady", "Kalpetta", "Dubai"],
   whatsapp: "918593882776",
   whatsappDisplay: "+91 85938 82776",
   email: "srventerprises78@gmail.com",
@@ -44,14 +52,16 @@ export const COMPANY_INFO: CompanyInfo = {
     building: "EKM Building",
     landmark: "Opposite Municipal Stadium",
     road: "Mini Bypass",
-    city: "Sultan Bathery",
+    city: "Sulthan Bathery",
     district: "Wayanad",
     state: "Kerala",
     pincode: "673592",
-    full: "EKM Building, Opposite Municipal Stadium, Mini Bypass, Sultan Bathery, Wayanad, Kerala - 673592",
+    full: "EKM Building, Opposite Municipal Stadium, Mini Bypass, Sulthan Bathery, Wayanad, Kerala - 673592",
   },
   crmUrl: "https://srventerprisesgroup.com",
   workingHours: "Monday - Saturday: 9:00 AM - 7:30 PM | Sunday: On Call",
+  logoUrl: "/images/srv-logo.png",
+  logoCardUrl: "/images/srv-logo-card.png",
 };
 
 export interface HeroSlide {
@@ -571,17 +581,53 @@ export const WATER_PROBLEMS = [
   },
 ];
 
-export const SUPPORTED_BRANDS = [
-  { name: "Kent RO", logoText: "KENT" },
-  { name: "AquaSure from Aquaguard", logoText: "AquaSure" },
-  { name: "Pure Drops", logoText: "Pure Drops" },
-  { name: "Aquaneeta", logoText: "AQUANEETA" },
-  { name: "Supreme", logoText: "supreme" },
-  { name: "Faber", logoText: "GFABER" },
-  { name: "Elica", logoText: "elica" },
-  { name: "V-Guard", logoText: "V-GUARD" },
-  { name: "Impex", logoText: "impex" },
-  { name: "KAF", logoText: "KAF" },
+export interface BrandPartner {
+  name: string;
+  category: string;
+  logoImage: string;
+}
+
+export const SUPPORTED_BRANDS: BrandPartner[] = [
+  {
+    name: "Royal Waterman",
+    category: "A Made of Royal Service",
+    logoImage: "/images/brand-royal-waterman.png",
+  },
+  {
+    name: "Supreme",
+    category: "Commercial & Piping",
+    logoImage: "/images/brand-supreme.png",
+  },
+  {
+    name: "V-Guard",
+    category: "Solar & Inverters",
+    logoImage: "/images/brand-vguard.png",
+  },
+  {
+    name: "Kalador",
+    category: "Kitchen & Water Systems",
+    logoImage: "/images/brand-kalador.png",
+  },
+  {
+    name: "AquaGuard",
+    category: "Water Purifiers",
+    logoImage: "/images/brand-aquaguard.png",
+  },
+  {
+    name: "Kent RO",
+    category: "Mineral RO Purifiers",
+    logoImage: "/images/brand-kent.png",
+  },
+  {
+    name: "Faber",
+    category: "Electric Chimneys & Hobs",
+    logoImage: "/images/brand-faber.png",
+  },
+  {
+    name: "Pureit",
+    category: "Advanced Purification",
+    logoImage: "/images/brand-pureit.png",
+  },
 ];
 
 export const TESTIMONIALS = [
