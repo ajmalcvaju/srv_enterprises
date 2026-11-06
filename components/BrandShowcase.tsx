@@ -234,7 +234,7 @@ export default function BrandShowcase() {
           <div className="text-center mb-5">
             <span className="text-xs font-bold text-slate-600 uppercase tracking-widest inline-flex items-center gap-1.5">
               <Award className="w-3.5 h-3.5 text-royal" />
-              <span>Continuous Partner Showcase • Official Visiting Card Brands</span>
+              <span>Authorized Multi-Brand Sales &amp; Certified Service</span>
             </span>
           </div>
 

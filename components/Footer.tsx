@@ -264,7 +264,7 @@ export default function Footer() {
         {/* Supported Brands Bar with Real Logos */}
         <div className="pt-8 pb-10 border-t border-navy-800">
           <div className="text-xs uppercase tracking-widest text-slate-300 mb-6 text-center font-bold">
-            Authorized Sales & Multi-Brand Engineering Partners (From Official Visiting Card)
+            Authorized Sales & Multi-Brand Engineering Partners
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 items-center max-w-6xl mx-auto">
             {SUPPORTED_BRANDS.map((b) => (

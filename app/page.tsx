@@ -42,7 +42,7 @@ export default function HomePage() {
       {/* 2. Trust and Achievement Section - 10+ Years & 10,000+ Customers */}
       <StatsSection />
 
-      {/* 2.5 Official Product Brand Logos from Visiting Card */}
+      {/* 2.5 Official Partner Brand Logos */}
       <BrandShowcase />
 
       {/* 3. Core Engineering & Product Divisions */}
