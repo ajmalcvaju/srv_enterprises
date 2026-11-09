@@ -39,19 +39,10 @@ export default function HomePage() {
       {/* 1. Hero Section - 5-Slide Carousel */}
       <HeroCarousel />
 
-      {/* 2. Trust and Achievement Section - 10+ Years & 10,000+ Customers */}
-      <StatsSection />
-
-      {/* 2.5 Official Partner Brand Logos */}
-      <BrandShowcase />
-
-      {/* 3. Core Engineering & Product Divisions */}
-      <MainCategories />
-
-      {/* 4. Featured Multi-Division Systems Showcase */}
-      <section className="py-20 bg-white relative">
+      {/* 2. Featured Systems Across All Divisions (Just Below Hero Section) */}
+      <section className="py-16 sm:py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-slate-200 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 pb-6 border-b border-slate-200 gap-4">
             <div className="max-w-2xl">
               <span className="text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-3 py-1 rounded-full inline-block mb-3">
                 Flagship Engineering Systems
@@ -91,6 +82,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 3. Trust and Achievement Section - 10+ Years & 10,000+ Customers */}
+      <StatsSection />
+
+      {/* 4. Official Partner Brand Logos */}
+      <BrandShowcase />
+
+      {/* 5. Core Engineering & Product Divisions */}
+      <MainCategories />
 
       {/* 5. Water Troubleshooter (Symptom-to-Solution Diagnostic) */}
       <WaterTroubleshooter />
