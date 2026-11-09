@@ -10,8 +10,6 @@ import {
   ArrowRight,
   ShieldCheck,
   CheckCircle,
-  Play,
-  Pause,
 } from "lucide-react";
 import { HERO_SLIDES } from "@/data/siteData";
 
@@ -21,21 +19,19 @@ interface HeroCarouselProps {
 
 export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
   const [current, setCurrent] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const total = HERO_SLIDES.length;
 
   useEffect(() => {
-    if (isPaused) return;
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % total);
-    }, 6000);
+    }, 5000);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [current, isPaused, total]);
+  }, [current, total]);
 
   const goToSlide = (index: number) => {
     setCurrent(index);
@@ -52,8 +48,6 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
   return (
     <section
       className="relative w-full bg-navy overflow-hidden"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
       aria-label="Hero Carousel"
     >
       {/* Background Decorative Mesh */}
@@ -219,27 +213,21 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
             ))}
           </div>
 
-          {/* Prev / Next & Pause Buttons */}
+          {/* Navigation Arrow Buttons */}
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setIsPaused(!isPaused)}
-              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
-              aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
-              title={isPaused ? "Play slideshow" : "Pause slideshow"}
-            >
-              {isPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
-            </button>
-            <button
               onClick={prevSlide}
-              className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all border border-white/10 hover:border-aqua/40"
+              className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white transition-all border border-white/10 hover:border-aqua/40"
               aria-label="Previous Slide"
+              title="Previous Slide"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all border border-white/10 hover:border-aqua/40"
+              className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white transition-all border border-white/10 hover:border-aqua/40"
               aria-label="Next Slide"
+              title="Next Slide"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
