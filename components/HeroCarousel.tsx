@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import {
   ChevronLeft,
@@ -19,11 +18,26 @@ interface HeroCarouselProps {
 
 export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
   const [current, setCurrent] = useState(0);
+  const [isHolding, setIsHolding] = useState(false);
+  const [isLongPress, setIsLongPress] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const longPressTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const isHorizontalSwipe = useRef<boolean | null>(null);
 
   const total = HERO_SLIDES.length;
 
+  // Auto-play timer: runs full time, pauses while user is holding/pressing down or dragging
   useEffect(() => {
+    if (isHolding || isDragging) {
+      if (timerRef.current) clearInterval(timerRef.current);
+      return;
+    }
+
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % total);
     }, 5000);
@@ -31,18 +45,138 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [current, total]);
+  }, [current, isHolding, isDragging, total]);
 
   const goToSlide = (index: number) => {
     setCurrent(index);
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrent((prev) => (prev + 1) % total);
+  }, [total]);
+
+  const prevSlide = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + total) % total);
+  }, [total]);
+
+  // Touch Handlers for Mobile Swipe & Long-Press
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touch = e.touches[0];
+    touchStartX.current = touch.clientX;
+    touchStartY.current = touch.clientY;
+    isHorizontalSwipe.current = null;
+    setIsHolding(true);
+    setDragOffset(0);
+
+    // If pressed for > 300ms without dragging, lock content on screen
+    if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+    longPressTimerRef.current = setTimeout(() => {
+      setIsLongPress(true);
+    }, 300);
   };
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + total) % total);
+  const handleTouchMove = (e: React.TouchEvent) => {
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - touchStartX.current;
+    const deltaY = touch.clientY - touchStartY.current;
+
+    // Detect direction on first significant movement
+    if (isHorizontalSwipe.current === null) {
+      if (Math.abs(deltaX) > 8 || Math.abs(deltaY) > 8) {
+        isHorizontalSwipe.current = Math.abs(deltaX) > Math.abs(deltaY);
+        if (!isHorizontalSwipe.current) {
+          // Vertical page scroll: don't intercept
+          if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+          setIsLongPress(false);
+          setIsHolding(false);
+          setIsDragging(false);
+          return;
+        }
+      }
+    }
+
+    if (isHorizontalSwipe.current) {
+      // Horizontal swipe active
+      if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+      setIsLongPress(false);
+      setIsDragging(true);
+
+      // Edge resistance
+      let offset = deltaX;
+      if ((current === 0 && deltaX > 0) || (current === total - 1 && deltaX < 0)) {
+        offset = deltaX * 0.35;
+      }
+      setDragOffset(offset);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+
+    if (isDragging) {
+      if (dragOffset < -50) {
+        nextSlide();
+      } else if (dragOffset > 50) {
+        prevSlide();
+      }
+    }
+
+    setIsDragging(false);
+    setDragOffset(0);
+    setIsLongPress(false);
+    setIsHolding(false);
+    isHorizontalSwipe.current = null;
+  };
+
+  // Mouse Handlers (for desktop testing / trackpad dragging)
+  const isMouseDown = useRef(false);
+  const mouseStartX = useRef(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return;
+    isMouseDown.current = true;
+    mouseStartX.current = e.clientX;
+    setIsHolding(true);
+
+    if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+    longPressTimerRef.current = setTimeout(() => {
+      setIsLongPress(true);
+    }, 300);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isMouseDown.current) return;
+    const deltaX = e.clientX - mouseStartX.current;
+    if (Math.abs(deltaX) > 10) {
+      if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+      setIsLongPress(false);
+      setIsDragging(true);
+
+      let offset = deltaX;
+      if ((current === 0 && deltaX > 0) || (current === total - 1 && deltaX < 0)) {
+        offset = deltaX * 0.35;
+      }
+      setDragOffset(offset);
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (!isMouseDown.current) return;
+    isMouseDown.current = false;
+    if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current);
+
+    if (isDragging) {
+      if (dragOffset < -50) {
+        nextSlide();
+      } else if (dragOffset > 50) {
+        prevSlide();
+      }
+    }
+
+    setIsDragging(false);
+    setDragOffset(0);
+    setIsLongPress(false);
+    setIsHolding(false);
   };
 
   return (
@@ -58,18 +192,36 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
         <div className="absolute inset-0 bg-[radial-gradient(#36C6D9_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
       </div>
 
-      {/* Carousel Container */}
-      <div className="relative grid grid-cols-1 items-center z-10 min-h-[580px] sm:min-h-[620px] lg:min-h-[680px]">
-        {HERO_SLIDES.map((slide, index) => {
-          const isActive = index === current;
-          return (
+      {/* Long-Press Lock Indicator (shows when user holds down on screen) */}
+      {isLongPress && (
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-navy-950/90 border border-aqua/40 text-aqua text-xs font-semibold px-4 py-1.5 rounded-full shadow-glow backdrop-blur-md flex items-center gap-2 pointer-events-none animate-pulse">
+          <span className="w-2 h-2 rounded-full bg-aqua animate-ping" />
+          <span>Content Paused • Hold to Read</span>
+        </div>
+      )}
+
+      {/* Carousel Track Container - Swipeable left & right in mobile, draggable on desktop */}
+      <div
+        className="relative overflow-hidden w-full z-10 touch-pan-y select-none cursor-grab active:cursor-grabbing"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
+        <div
+          className={`flex w-full ${isDragging ? "" : "transition-transform duration-500 ease-out"}`}
+          style={{
+            transform: `translateX(calc(-${current * 100}% + ${dragOffset}px))`,
+          }}
+        >
+          {HERO_SLIDES.map((slide) => (
             <div
               key={slide.id}
-              className={`col-start-1 row-start-1 w-full transition-opacity duration-1000 ease-in-out flex items-center ${
-                isActive
-                  ? "opacity-100 pointer-events-auto z-10"
-                  : "opacity-0 pointer-events-none z-0"
-              }`}
+              className="w-full shrink-0 flex items-center"
             >
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 lg:py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
@@ -157,6 +309,7 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                             src={slide.image}
                             alt={slide.headline}
                             className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"
+                            draggable={false}
                           />
                         </div>
 
@@ -173,12 +326,12 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                 </div>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
 
-      {/* Carousel Controls & Pagination Bar */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      {/* Carousel Controls & Pagination Bar (hidden on mobile, visible on tablet & desktop) */}
+      <div className="hidden sm:block relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
           {/* Slide Indicator Pills */}
           <div className="flex items-center gap-2">
