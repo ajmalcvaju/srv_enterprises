@@ -59,22 +59,22 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
       </div>
 
       {/* Carousel Container */}
-      <div className="relative min-h-[580px] sm:min-h-[620px] lg:min-h-[680px] flex items-center z-10">
+      <div className="relative grid grid-cols-1 items-center z-10 min-h-[580px] sm:min-h-[620px] lg:min-h-[680px]">
         {HERO_SLIDES.map((slide, index) => {
           const isActive = index === current;
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out flex items-center ${
+              className={`col-start-1 row-start-1 w-full transition-opacity duration-1000 ease-in-out flex items-center ${
                 isActive
                   ? "opacity-100 pointer-events-auto z-10"
                   : "opacity-0 pointer-events-none z-0"
               }`}
             >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-16">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                  {/* Left Column: Content */}
-                  <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 lg:py-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+                  {/* Left Column: Content (below image on mobile, left on desktop) */}
+                  <div className="order-2 lg:order-1 lg:col-span-7 space-y-5 sm:space-y-6 text-left">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide">
                       <Sparkles className="w-4 h-4 text-aqua animate-pulse" />
@@ -132,14 +132,14 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                     </div>
                   </div>
 
-                  {/* Right Column: Visual Product Showcase */}
-                  <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                  {/* Right Column: Visual Product Showcase (on top in mobile, right on desktop) */}
+                  <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
                     <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-none">
                       {/* Ambient Glow */}
                       <div className="absolute inset-0 bg-gradient-to-tr from-aqua/20 to-royal/30 rounded-3xl blur-2xl transform scale-95" />
 
                       {/* Card Frame */}
-                      <div className="relative rounded-3xl bg-gradient-to-b from-navy-700/60 to-navy-900/90 border border-white/15 backdrop-blur-xl p-4 sm:p-6 shadow-elevated overflow-hidden group">
+                      <div className="relative rounded-3xl bg-gradient-to-b from-navy-700/60 to-navy-900/90 border border-white/15 backdrop-blur-xl p-3 sm:p-6 shadow-elevated overflow-hidden group">
                         {/* Slide Special Tag */}
                         {slide.id === 2 && (
                           <div className="absolute top-4 right-4 z-20 bg-aqua text-navy-950 text-xs font-extrabold px-3 py-1 rounded-full shadow-glow">
@@ -152,7 +152,7 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                           </div>
                         )}
 
-                        <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden bg-navy-900/80 flex items-center justify-center">
+                        <div className="relative h-60 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden bg-navy-900/80 flex items-center justify-center">
                           <img
                             src={slide.image}
                             alt={slide.headline}
@@ -161,7 +161,7 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                         </div>
 
                         {/* Caption Strip */}
-                        <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+                        <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
                           <span className="font-semibold text-white">
                             {slide.headline.split(".")[0]}
                           </span>
