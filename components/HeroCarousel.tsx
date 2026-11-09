@@ -162,7 +162,7 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                           <img
                             src={slide.image}
                             alt={slide.headline}
-                            className="object-contain w-full h-full p-4 transform group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
+                            className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"
                           />
                         </div>
 
