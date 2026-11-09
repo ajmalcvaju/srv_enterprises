@@ -74,7 +74,7 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 lg:py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
                   {/* Left Column: Content (below image on mobile, left on desktop) */}
-                  <div className="order-2 lg:order-1 lg:col-span-7 space-y-5 sm:space-y-6 text-left">
+                  <div className="order-2 lg:order-1 lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide">
                       <Sparkles className="w-4 h-4 text-aqua animate-pulse" />
@@ -91,21 +91,21 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                     </h1>
 
                     {/* Subtitle / Description */}
-                    <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-normal">
+                    <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-normal mx-auto lg:mx-0">
                       {slide.description}
                     </p>
 
                     {/* Key Feature Highlight Tag */}
-                    <div className="flex items-center gap-2 text-xs sm:text-sm text-aqua font-medium">
+                    <div className="flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm text-aqua font-medium">
                       <CheckCircle className="w-4 h-4 text-aqua shrink-0" />
                       <span>{slide.taglineSecondary}</span>
                     </div>
 
                     {/* CTAs */}
-                    <div className="pt-2 flex flex-wrap items-center gap-4">
+                    <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full">
                       <Link
                         href={slide.primaryCtaLink}
-                        className="inline-flex items-center gap-2.5 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-7 py-3.5 rounded-xl text-sm sm:text-base shadow-royal hover:shadow-glow transition-all transform hover:-translate-y-0.5"
+                        className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base shadow-royal hover:shadow-glow transition-all transform hover:-translate-y-0.5"
                       >
                         <span>{slide.primaryCtaText}</span>
                         <ArrowRight className="w-4 h-4" />
@@ -113,14 +113,14 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
 
                       <button
                         onClick={onOpenQuote}
-                        className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-xl text-sm sm:text-base border border-white/20 backdrop-blur-md transition-all hover:border-aqua/50"
+                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base border border-white/20 backdrop-blur-md transition-all hover:border-aqua/50"
                       >
                         <span>{slide.secondaryCtaText}</span>
                       </button>
                     </div>
 
                     {/* Trust Proof Micro-Badge */}
-                    <div className="pt-4 flex items-center gap-6 text-xs text-slate-400">
+                    <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs text-slate-400">
                       <div className="flex items-center gap-1.5">
                         <ShieldCheck className="w-4 h-4 text-aqua" />
                         <span>10,000+ Customers</span>
