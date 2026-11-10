@@ -24,6 +24,7 @@ import WaterTroubleshooter from "@/components/WaterTroubleshooter";
 import NoticeShowcase from "@/components/NoticeShowcase";
 import ProductCard from "@/components/ProductCard";
 import BrandShowcase from "@/components/BrandShowcase";
+import CompanyShowcase from "@/components/CompanyShowcase";
 import {
   COMPANY_INFO,
   PRODUCTS,
@@ -91,6 +92,9 @@ export default function HomePage() {
 
       {/* 5. Core Engineering & Product Divisions */}
       <MainCategories />
+
+      {/* 6. Authentic Company Footage & Customer Installation Stories */}
+      <CompanyShowcase />
 
       {/* 5. Water Troubleshooter (Symptom-to-Solution Diagnostic) */}
       <WaterTroubleshooter />
