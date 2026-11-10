@@ -18,8 +18,6 @@ import {
   MessageCircle,
   Sparkles,
   ArrowRight,
-  Award,
-  Users,
 } from "lucide-react";
 import { SERVICES, COMPANY_INFO } from "@/data/siteData";
 import WaterTdsCalculator from "@/components/WaterTdsCalculator";
@@ -105,33 +103,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 2. Premium Trust Banner (Exact instruction requirement) */}
-      <section className="bg-gradient-to-r from-navy-900 to-navy-800 py-6 border-y border-navy-700/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
-            <div className="flex items-center gap-3">
-              <Award className="w-6 h-6 text-aqua" />
-              <span className="text-lg sm:text-xl font-extrabold text-white font-heading">
-                10+ Years of Experience
-              </span>
-            </div>
-            <span className="hidden sm:inline text-white/30 text-xl font-light">|</span>
-            <div className="flex items-center gap-3">
-              <Users className="w-6 h-6 text-aqua" />
-              <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-extrabold text-white font-heading">
-                  10,000+ Satisfied Customers
-                </span>
-                <span className="text-xs text-aqua font-semibold">
-                  7,500+ Domestic • 2,500+ Commercial
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Detailed Services Grid */}
+      {/* 2. Detailed Services Grid */}
       <section className="py-20 bg-surface-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
