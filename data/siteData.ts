@@ -171,6 +171,26 @@ export interface ProductItem {
 export const PRODUCTS: ProductItem[] = [
   // Primary Category 1: Water Purifiers
   {
+    id: "royal-waterman-relax-ro",
+    name: "Royal Waterman Relax Diamond RO Purifier",
+    category: "purifiers",
+    categoryLabel: "Water Purifier",
+    tagline: "Triple Active Copper + Alkaline Diamond Edition",
+    description: "Ultra-luxury designer RO water purifier by Royal Waterman featuring a diamond-faceted matte black cabinet, vertical golden LED status display, rose gold metallic tap, and Triple Active Copper + Alkaline mineral infusion.",
+    image: "/images/royal-waterman-relax-ro.webp",
+    features: [
+      "Triple Active Copper + Alkaline Immuno Filtration",
+      "Diamond-Faceted Luxury Matte Black Aesthetic Cabinet",
+      "Vertical Golden LED Purity & Tank Level Monitoring Bar",
+      "Rose Gold Metallic Ergonomic Push Dispensing Tap",
+      "ISI Marked (IS 14724) & ISO 9001:2015 Certified System",
+      "Certified Doorstep Installation & Lifetime Service Support",
+    ],
+    isPrimary: true,
+    badge: "Luxury Edition",
+    suitableFor: "Designer Kitchens, Luxury Villas, Executive Suites & High TDS Water",
+  },
+  {
     id: "royal-waterman-fighter-ro",
     name: "Royal Waterman Fighter 3.0 RO Purifier",
     category: "purifiers",
