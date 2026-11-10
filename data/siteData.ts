@@ -12,6 +12,7 @@ export interface CompanyInfo {
   additionalPhones: string[];
   gstin: string;
   branches: string[];
+  proprietor: string;
   whatsapp: string;
   whatsappDisplay: string;
   email: string;
@@ -25,6 +26,8 @@ export interface CompanyInfo {
     pincode: string;
     full: string;
   };
+  mapEmbedUrl: string;
+  googleMapsDirectionsUrl: string;
   crmUrl: string;
   workingHours: string;
   logoUrl: string;
@@ -34,6 +37,7 @@ export interface CompanyInfo {
 export const COMPANY_INFO: CompanyInfo = {
   name: "SRV ENTERPRISES",
   shortName: "SRV",
+  proprietor: "Vipin",
   tagline: "Pure Water. Better Living.",
   subTagline: "Sales & Service - Water Purifiers, Treatment Plants, Solar, CCTV, Inverters & Kitchen Solutions",
   experienceYears: 10,
@@ -52,12 +56,16 @@ export const COMPANY_INFO: CompanyInfo = {
     building: "EKM Building",
     landmark: "Opposite Municipal Stadium",
     road: "Mini Bypass",
-    city: "Sulthan Bathery",
+    city: "Sultan Bathery",
     district: "Wayanad",
     state: "Kerala",
     pincode: "673592",
-    full: "EKM Building, Opposite Municipal Stadium, Mini Bypass, Sulthan Bathery, Wayanad, Kerala - 673592",
+    full: "Vipin SRV ENTERPRISES, EKM Building, Opposite Municipal Stadium, Mini Bypass, Sultan Bathery, Kerala - 673592",
   },
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.4843251369525!2d76.2535382!3d11.6600483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba609d565df94ab%3A0x63de9bdc4621a587!2sSRV%20ENTERPRISES%20WATER%20PURIFIER%20%2CSOLAR%20WATER%20HEATER%20SALES%26SERVICE!5e0!3m2!1sen!2sin!4v1794292422428!5m2!1sen!2sin",
+  googleMapsDirectionsUrl:
+    "https://www.google.com/maps/place/SRV+ENTERPRISES+WATER+PURIFIER+,SOLAR+WATER+HEATER+SALES%26SERVICE/@11.6600483,76.2535382,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba609d565df94ab:0x63de9bdc4621a587!8m2!3d11.6600483!4d76.2535382!16s%2Fg%2F11q2_w_98_?entry=ttu",
   crmUrl: "https://srventerprisesgroup.com",
   workingHours: "Monday - Saturday: 9:00 AM - 7:30 PM | Sunday: On Call",
   logoUrl: "/images/srv-logo.png",

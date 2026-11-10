@@ -226,9 +226,16 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-slate-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-aqua shrink-0 mt-0.5" />
-                <span className="text-xs leading-relaxed">
+                <a
+                  href={COMPANY_INFO.googleMapsDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs leading-relaxed hover:text-aqua transition-colors"
+                  title="Open location in Google Maps"
+                >
+                  <span className="font-semibold text-white block">{COMPANY_INFO.proprietor} - {COMPANY_INFO.name}</span>
                   {COMPANY_INFO.address.building}, {COMPANY_INFO.address.landmark}, {COMPANY_INFO.address.road}, {COMPANY_INFO.address.city}, {COMPANY_INFO.address.district}, {COMPANY_INFO.address.state} - {COMPANY_INFO.address.pincode}
-                </span>
+                </a>
               </div>
 
               <div className="flex items-center gap-2.5">

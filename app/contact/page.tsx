@@ -102,11 +102,21 @@ export default function ContactPage() {
                     <h3 className="font-bold text-navy text-sm font-heading mb-1">
                       Business & Workshop Address
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                      <span className="font-bold text-navy">{COMPANY_INFO.proprietor} - {COMPANY_INFO.name}</span><br />
                       {COMPANY_INFO.address.building}, {COMPANY_INFO.address.landmark},<br />
                       {COMPANY_INFO.address.road}, {COMPANY_INFO.address.city},<br />
                       {COMPANY_INFO.address.district}, {COMPANY_INFO.address.state} - {COMPANY_INFO.address.pincode}
                     </p>
+                    <a
+                      href={COMPANY_INFO.googleMapsDirectionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-royal hover:text-aqua mt-2.5 transition-colors"
+                    >
+                      <span>Get Directions on Google Maps</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
                   </div>
                 </div>
 
@@ -224,31 +234,45 @@ export default function ContactPage() {
       </section>
 
       {/* 4. Google Maps Integration (Sultan Bathery Location) */}
-      <section className="bg-white py-16 border-t border-slate-200">
+      <section className="bg-white py-14 sm:py-16 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-3.5 py-1.5 rounded-full inline-block mb-2">
-              Visit Our Center
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy font-heading">
-              Our Location in Sultan Bathery
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Conveniently located at EKM Building, opposite Municipal Stadium on Mini Bypass, Sultan Bathery, Wayanad.
-            </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-3.5 py-1.5 rounded-full inline-block mb-2">
+                Visit Our Center
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy font-heading">
+                Our Location in Sultan Bathery
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">
+                {COMPANY_INFO.address.full}
+              </p>
+            </div>
+            <div>
+              <a
+                href={COMPANY_INFO.googleMapsDirectionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-navy hover:bg-navy-800 text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-sm"
+              >
+                <MapPin className="w-4 h-4 text-aqua" />
+                <span>Get Directions on Google Maps</span>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+              </a>
+            </div>
           </div>
 
-          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-card h-96 relative bg-slate-100">
-            {/* Embedded Google Map iframe focused on Sultan Bathery Municipal Stadium */}
+          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-card h-96 sm:h-[450px] relative bg-slate-100">
+            {/* Embedded Google Map iframe focused on verified business listing */}
             <iframe
-              title="SRV ENTERPRISES Sultan Bathery Location"
-              src="https://maps.google.com/maps?q=Municipal%20Stadium%20Mini%20Bypass%20Sultan%20Bathery%20Wayanad%20Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="SRV ENTERPRISES WATER PURIFIER, SOLAR WATER HEATER SALES & SERVICE"
+              src={COMPANY_INFO.mapEmbedUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen={false}
+              allowFullScreen={true}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
               className="w-full h-full"
             />
           </div>
