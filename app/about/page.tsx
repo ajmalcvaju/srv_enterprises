@@ -283,7 +283,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                We supply and service top-tier RO, UV, UF, and alkaline water purifiers for residences, cafes, and healthcare institutions. Featuring the Wave Krystal, Wave Deluxe, Prolife, and Pure Drops ranges with genuine spare parts.
+                We supply and service top-tier RO, UV, UF, and alkaline water purifiers for residences, cafes, and healthcare institutions. Featuring Royal Waterman, Prolife, and allied ranges with genuine spare parts.
               </p>
               <ul className="text-xs text-slate-700 space-y-1.5 font-medium">
                 <li>• Whole-house and kitchen-specific models</li>
