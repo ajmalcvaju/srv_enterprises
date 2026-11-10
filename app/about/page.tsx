@@ -62,7 +62,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Premium Hero Section */}
-      <section className="relative bg-navy py-20 lg:py-28 text-white overflow-hidden">
+      <section className="relative bg-navy py-10 lg:py-14 text-white overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-24 right-0 w-96 h-96 bg-royal/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-10 w-80 h-80 bg-aqua/10 rounded-full blur-3xl" />
@@ -71,32 +71,32 @@ export default function AboutPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-6">
-              <Sparkles className="w-4 h-4 text-aqua" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-3 sm:mb-4">
+              <Sparkles className="w-3.5 h-3.5 text-aqua" />
               <span>Corporate Profile & Engineering Heritage</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-aqua">SRV ENTERPRISES</span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
               For over a decade, SRV ENTERPRISES has been at the forefront of safe, chemical-free water purification, industrial water treatment plants, and complete modern living solutions across Kerala.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm">
               <div className="flex items-center gap-2 text-aqua font-bold">
-                <Award className="w-5 h-5" />
+                <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>10+ Years of Experience</span>
               </div>
               <span className="text-white/40">•</span>
               <div className="flex items-center gap-2 text-aqua font-bold">
-                <Users className="w-5 h-5" />
+                <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>10,000+ Satisfied Customers</span>
               </div>
               <span className="text-white/40">•</span>
               <div className="flex items-center gap-2 text-slate-300">
-                <MapPin className="w-4 h-4 text-aqua" />
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-aqua" />
                 <span>Sultan Bathery, Wayanad</span>
               </div>
             </div>

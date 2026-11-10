@@ -89,15 +89,15 @@ export default function ProductsPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Hero Section */}
-      <section className="relative bg-navy py-16 sm:py-20 text-white overflow-hidden">
+      <section className="relative bg-navy py-8 sm:py-10 text-white overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-royal/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-10 w-80 h-80 bg-aqua/10 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-4">
-            <Sparkles className="w-4 h-4 text-aqua" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-aqua" />
             <span>Authorized Product Catalog</span>
           </div>
 
@@ -105,7 +105,7 @@ export default function ProductsPage() {
             Complete Engineering &amp; Technology Catalog
           </h1>
 
-          <p className="mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+          <p className="mt-3 text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
             Certified Water Purifiers, Industrial Treatment Plants, Solar Water Heaters, Solar Power Plants, 24/7 CCTV Surveillance, Power Inverters, and Auto-Clean Kitchen Chimneys &amp; Hobs.
           </p>
         </div>

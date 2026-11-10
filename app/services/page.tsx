@@ -63,7 +63,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Hero Section */}
-      <section className="relative bg-navy py-20 lg:py-24 text-white overflow-hidden">
+      <section className="relative bg-navy py-10 lg:py-12 text-white overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-20 left-10 w-96 h-96 bg-royal/20 rounded-full blur-3xl" />
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-aqua/10 rounded-full blur-3xl" />
@@ -71,32 +71,32 @@ export default function ServicesPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-6">
-            <Sparkles className="w-4 h-4 text-aqua" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-3 sm:mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-aqua" />
             <span>Certified Field Engineering & Doorstep Service</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight">
             Engineering & Water Treatment Services
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
             Turn-key water treatment plant design, commercial RO engineering, multi-brand purifier maintenance, and complimentary on-site water testing across Wayanad and Northern Kerala.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi%20SRV%20ENTERPRISES,%20I%20would%20like%20to%20request%20a%20service%20technician%20visit.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-7 py-3.5 rounded-xl text-sm shadow-royal hover:shadow-glow transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-6 py-2.5 sm:px-7 sm:py-3 rounded-xl text-xs sm:text-sm shadow-royal hover:shadow-glow transition-all"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               <span>Book Service on WhatsApp</span>
             </a>
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-xl text-sm border border-white/20"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm border border-white/20"
             >
               <Phone className="w-4 h-4 text-aqua" />
               <span>Call Helpline: {COMPANY_INFO.displayPhone}</span>
