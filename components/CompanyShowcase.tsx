@@ -114,7 +114,7 @@ export default function CompanyShowcase() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-navy-950 via-navy to-navy-900 text-white relative overflow-hidden">
+    <section className="py-20 bg-[#040F1E] bg-gradient-to-b from-navy-950 via-navy-800 to-navy-900 text-white relative overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-royal/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-aqua/15 rounded-full blur-3xl pointer-events-none" />
@@ -127,10 +127,10 @@ export default function CompanyShowcase() {
               <Sparkles className="w-4 h-4 text-aqua animate-pulse" />
               <span>Real Company Footage &amp; Customer Stories</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight text-white">
               Real Installations. Authentic Customer Trust.
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
+            <p className="text-slate-200 text-base sm:text-lg mt-3 leading-relaxed">
               Step into real homes and project sites across Kerala. See our certified technicians installing, calibrating, and handing over Waterman &amp; SRV water purification and filtration systems.
             </p>
           </div>
@@ -152,10 +152,10 @@ export default function CompanyShowcase() {
             return (
               <div
                 key={item.id}
-                className="group rounded-3xl bg-white/[0.04] border border-white/10 hover:border-aqua/40 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-glow flex flex-col justify-between"
+                className="group rounded-3xl bg-[#071C35] border border-white/15 hover:border-aqua/50 shadow-card overflow-hidden transition-all duration-300 hover:shadow-glow flex flex-col justify-between"
               >
                 {/* Media Container */}
-                <div className="relative aspect-[9/12] sm:aspect-[9/13] w-full bg-navy-950 overflow-hidden">
+                <div className="relative aspect-[9/12] sm:aspect-[9/13] w-full bg-[#020B16] overflow-hidden">
                   {item.type === "photo" ? (
                     <div className="relative w-full h-full">
                       <img
@@ -235,11 +235,11 @@ export default function CompanyShowcase() {
                   )}
 
                   {/* Gradient Shade for Title legibility */}
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#020B16] via-[#020B16]/50 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Content Card Body */}
-                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between bg-[#071C35]">
                   <div className="space-y-3">
                     <span
                       className={`text-xs font-semibold px-2.5 py-1 rounded-full border inline-block ${item.badgeColor}`}
@@ -251,17 +251,17 @@ export default function CompanyShowcase() {
                       {item.headline}
                     </h3>
 
-                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal">
+                    <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-normal">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Feature Pills */}
-                  <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2">
+                  <div className="pt-4 border-t border-white/15 flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[11px] font-medium bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg"
+                        className="text-[11px] font-semibold bg-white/10 text-slate-100 border border-white/20 px-2.5 py-1 rounded-lg"
                       >
                         {tag}
                       </span>
@@ -274,7 +274,7 @@ export default function CompanyShowcase() {
         </div>
 
         {/* Bottom Trust Banner */}
-        <div className="mt-12 p-6 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-12 p-6 rounded-2xl bg-[#071C35] border border-white/15 shadow-card flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-royal/20 text-aqua flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6 text-aqua" />
@@ -283,8 +283,8 @@ export default function CompanyShowcase() {
               <div className="text-sm font-bold text-white">
                 Certified Engineers on Every Installation
               </div>
-              <div className="text-xs text-slate-400">
-                10+ Years Experience • 10,000+ Satisfied Customers across Palakkad &amp; Kerala
+              <div className="text-xs text-slate-300">
+                10+ Years Experience • 10,000+ Satisfied Customers across Sultan Bathery, Wayanad &amp; Kerala
               </div>
             </div>
           </div>
