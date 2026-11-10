@@ -164,6 +164,7 @@ export interface ProductItem {
   image: string;
   features: string[];
   isPrimary: boolean;
+  isFeatured?: boolean;
   badge?: string;
   suitableFor: string;
 }
@@ -187,6 +188,7 @@ export const PRODUCTS: ProductItem[] = [
       "Certified Doorstep Installation & Lifetime Service Support",
     ],
     isPrimary: true,
+    isFeatured: true,
     badge: "Luxury Edition",
     suitableFor: "Designer Kitchens, Luxury Villas, Executive Suites & High TDS Water",
   },
@@ -309,6 +311,7 @@ export const PRODUCTS: ProductItem[] = [
       "Chemical Dosing System Integration",
     ],
     isPrimary: true,
+    isFeatured: true,
     badge: "Industrial Grade",
     suitableFor: "Hotels, Resorts, Hospitals, Food Processing Units",
   },
@@ -432,6 +435,7 @@ export const PRODUCTS: ProductItem[] = [
       "Complete Roof Structural Installation & Plumbing by SRV Enterprises",
     ],
     isPrimary: true,
+    isFeatured: true,
     badge: "Supreme Solar",
     suitableFor: "Villas, Independent Houses, Homestays, Eco-Resorts, Hostels & Hospitals",
   },
@@ -491,6 +495,7 @@ export const PRODUCTS: ProductItem[] = [
       "Concealed Aesthetic Cabling & 2-Year Hardware Warranty",
     ],
     isPrimary: true,
+    isFeatured: true,
     badge: "24/7 Night Vision",
     suitableFor: "Homes, Estates, Retail Shops, Warehouses, Campuses",
   },

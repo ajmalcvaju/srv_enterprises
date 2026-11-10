@@ -33,7 +33,15 @@ import {
 } from "@/data/siteData";
 
 export default function HomePage() {
-  const featuredProducts = PRODUCTS.filter((p) => p.isPrimary);
+  const featuredProductIds = [
+    "royal-waterman-relax-ro",
+    "industrial-ro-plant-1000lph",
+    "supreme-solar-water-heater",
+    "cctv-surveillance-system",
+  ];
+  const featuredProducts = featuredProductIds
+    .map((id) => PRODUCTS.find((p) => p.id === id))
+    .filter((p): p is (typeof PRODUCTS)[0] => Boolean(p));
 
   return (
     <div className="flex flex-col w-full">
