@@ -304,11 +304,13 @@ export default function HeroCarousel({ onOpenQuote }: HeroCarouselProps) {
                           </div>
                         )}
 
-                        <div className="relative h-60 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden bg-navy-900/80 flex items-center justify-center">
+                        <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden bg-navy-900/80 flex items-center justify-center">
                           <img
                             src={slide.image}
                             alt={slide.headline}
-                            className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"
+                            className={`w-full h-full transform group-hover:scale-105 transition-transform duration-700 ${
+                              slide.id === 1 ? "object-cover object-top" : "object-cover"
+                            }`}
                             draggable={false}
                           />
                         </div>

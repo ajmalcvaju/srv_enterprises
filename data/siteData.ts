@@ -97,7 +97,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaLink: "/products?category=purifiers",
     secondaryCtaText: "Get a Free Quote",
     secondaryCtaLink: "#quote",
-    image: "/images/hero-water-purifier.jpg",
+    image: "/images/hero-water-purifier-waterman.jpg",
     taglineSecondary: "Multi-stage RO + UV + UF + Alkaline Filtration",
   },
   {
