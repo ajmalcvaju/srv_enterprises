@@ -69,8 +69,8 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-[radial-gradient(#36C6D9_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-3 sm:mb-4">
               <Sparkles className="w-3.5 h-3.5 text-aqua" />
               <span>Corporate Profile & Engineering Heritage</span>
@@ -80,11 +80,11 @@ export default function AboutPage() {
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-aqua">SRV ENTERPRISES</span>
             </h1>
 
-            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal max-w-2xl mx-auto">
               For over a decade, SRV ENTERPRISES has been at the forefront of safe, chemical-free water purification, industrial water treatment plants, and complete modern living solutions across Kerala.
             </p>
 
-            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
               <div className="flex items-center gap-2 text-aqua font-bold">
                 <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>10+ Years of Experience</span>
