@@ -64,7 +64,7 @@ export default function MainCategories() {
       title: "Solar Water Heaters & Solar Power Systems",
       shortDesc:
         "Harness Kerala's abundant solar energy. High-efficiency evacuated tube solar water heaters with food-grade SS tanks and rooftop solar power plants.",
-      image: "/images/hero-solar-energy.jpg",
+      image: "/images/supreme-solar-water-heater.webp",
       tagline: "Save Up To 80% on Water Heating & Domestic Electricity Bills",
       features: [
         "High-absorption German vacuum tube solar water heaters",
@@ -160,22 +160,32 @@ export default function MainCategories() {
               className="group bg-white rounded-3xl border border-slate-200/90 hover:border-royal/50 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
               <div>
-                {/* Visual Image Header */}
-                <div className="relative h-56 sm:h-64 w-full bg-slate-100 overflow-hidden">
-                  <div className={`absolute inset-0 bg-gradient-to-t ${div.gradient} z-10 pointer-events-none`} />
+                {/* Visual Image Header - Full View with Ambient Fill */}
+                <div className="relative h-64 sm:h-72 w-full bg-slate-900 overflow-hidden flex items-center justify-center">
+                  {/* Ambient Blurred Backdrop */}
+                  <img
+                    src={div.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 pointer-events-none"
+                  />
+                  <div className="absolute inset-0 bg-navy/20 pointer-events-none z-10" />
+
+                  {/* Sharp 100% Fully Visible Foreground Image */}
                   <img
                     src={div.image}
                     alt={div.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className="relative z-20 max-h-full max-w-full object-contain p-3.5 sm:p-4 transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
                     loading="lazy"
                   />
+
                   {/* Top Badges */}
-                  <div className="absolute top-4 left-4 z-20">
-                    <span className="bg-navy/90 backdrop-blur-md text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider border border-white/20">
+                  <div className="absolute top-4 left-4 z-30">
+                    <span className="bg-navy/90 backdrop-blur-md text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider border border-white/20 shadow-sm">
                       Division {div.number}
                     </span>
                   </div>
-                  <div className="absolute top-4 right-4 z-20">
+                  <div className="absolute top-4 right-4 z-30">
                     <span className="bg-white/95 backdrop-blur-md text-navy text-[11px] font-extrabold px-3 py-1 rounded-full shadow-sm border border-slate-200">
                       {div.badge}
                     </span>
@@ -189,11 +199,11 @@ export default function MainCategories() {
                     <span>{div.tagline}</span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-navy font-heading mb-3 group-hover:text-royal transition-colors leading-snug">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-navy font-heading mb-3 group-hover:text-royal transition-colors leading-snug min-h-[3.5rem] line-clamp-2">
                     {div.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5 min-h-[3rem] line-clamp-3">
                     {div.shortDesc}
                   </p>
 
