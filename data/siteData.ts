@@ -270,41 +270,6 @@ export const PRODUCTS: ProductItem[] = [
     badge: "Heavy Duty",
     suitableFor: "Cafes, Restaurants, Bakeries, Hostels, Clinics & High-Flow Homes",
   },
-  {
-    id: "prolife-aqua-9l",
-    name: "Prolife Aqua 9L Purity Station",
-    category: "purifiers",
-    categoryLabel: "Water Purifier",
-    tagline: "9-Liter High Capacity Storage for Families",
-    description: "High-capacity purification system built to ensure uninterrupted availability of pure water for larger families and busy households.",
-    image: "/images/prolife-aqua-9l.webp",
-    features: [
-      "9 Liters Sealed Storage Tank",
-      "Multi-Stage Heavy Sediment & Carbon Blocks",
-      "UV Disinfection Chamber",
-      "Tough Scratch-Resistant Body",
-    ],
-    isPrimary: true,
-    badge: "Large Capacity",
-    suitableFor: "Large Families, Educational Institutions, Staff Rooms",
-  },
-  {
-    id: "aqua-phoenix-ro",
-    name: "Aqua Phoenix Premium RO",
-    category: "purifiers",
-    categoryLabel: "Water Purifier",
-    tagline: "Superior Taste & Mineral Balance",
-    description: "Engineered with Japanese post-carbon polishing to eliminate bad odor and deliver pure, refreshing water taste every single time.",
-    image: "/images/aqua-phoenix-ro.webp",
-    features: [
-      "Silver-Impregnated Carbon Block",
-      "High Rejection RO Membrane",
-      "Overheat & Dry-Run Protection",
-      "Dual Color Elegant Finish",
-    ],
-    isPrimary: true,
-    suitableFor: "Homes, Executive Cabins, Clinics",
-  },
 
   // Primary Category 2: Water Treatment Plants
   {
