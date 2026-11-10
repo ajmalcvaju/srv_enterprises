@@ -171,6 +171,26 @@ export interface ProductItem {
 export const PRODUCTS: ProductItem[] = [
   // Primary Category 1: Water Purifiers
   {
+    id: "royal-waterman-fighter-ro",
+    name: "Royal Waterman Fighter 3.0 RO Purifier",
+    category: "purifiers",
+    categoryLabel: "Water Purifier",
+    tagline: "RO + UV + UF + Copper (Cu) Active Immuno Purity",
+    description: "Flagship domestic RO water purifier by Royal Waterman with active Copper (Cu) mineral infusion, smart LED status display, and multi-barrier filtration certified to ISO 9001:2015 & ISI standards.",
+    image: "/images/royal-waterman-fighter-ro.webp",
+    features: [
+      "Multi-Stage RO + UV + UF + Copper (Cu) Purification",
+      "Active Copper Infusion for Immunity & Digestion",
+      "Smart LED Status Indicators (Tank Full, Purifying, Source)",
+      "Food-Grade Dual-Tone Antibacterial Storage Tank",
+      "ISO 9001:2015 & ISI Certified Quality",
+      "SRV Certified Doorstep Installation & Lifetime Service",
+    ],
+    isPrimary: true,
+    badge: "Copper + Alkaline",
+    suitableFor: "Villas, Modern Kitchens, Clinics & High TDS Borewell Water",
+  },
+  {
     id: "wave-krystal-digital",
     name: "Wave Krystal Digital RO Water Purifier",
     category: "purifiers",
