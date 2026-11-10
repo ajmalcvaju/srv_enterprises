@@ -104,50 +104,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Key Statistics Highlight Strip */}
-      <section className="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 border-y border-navy-700/80 py-10 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="p-4 border-r border-navy-700/60 last:border-0">
-              <div className="text-3xl sm:text-4xl font-black text-aqua font-heading">
-                10+
-              </div>
-              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Years of Field Experience
-              </div>
-            </div>
-
-            <div className="p-4 border-r border-navy-700/60 last:border-0">
-              <div className="text-3xl sm:text-4xl font-black text-aqua font-heading">
-                10,000+
-              </div>
-              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Total Happy Customers
-              </div>
-            </div>
-
-            <div className="p-4 border-r border-navy-700/60 last:border-0">
-              <div className="text-3xl sm:text-4xl font-black text-white font-heading">
-                7,500+
-              </div>
-              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Domestic Households
-              </div>
-            </div>
-
-            <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-black text-white font-heading">
-                2,500+
-              </div>
-              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
-                Commercial Clients
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Company Introduction & Background (Grounding in Notice) */}
+      {/* 2. Company Introduction & Background (Grounding in Notice) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -220,7 +177,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Mission & Vision */}
+      {/* 3. Mission & Vision */}
       <section className="py-14 sm:py-16 bg-surface-light border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -251,7 +208,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Core Business Focus & Allied Offerings */}
+      {/* 4. Key Statistics Highlight Strip */}
+      <section className="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 border-y border-navy-700/80 py-10 text-white shadow-inner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="p-4 border-r border-navy-700/60 last:border-0">
+              <div className="text-3xl sm:text-4xl font-black text-aqua font-heading">
+                10+
+              </div>
+              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
+                Years of Field Experience
+              </div>
+            </div>
+
+            <div className="p-4 border-r border-navy-700/60 last:border-0">
+              <div className="text-3xl sm:text-4xl font-black text-aqua font-heading">
+                10,000+
+              </div>
+              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
+                Total Happy Customers
+              </div>
+            </div>
+
+            <div className="p-4 border-r border-navy-700/60 last:border-0">
+              <div className="text-3xl sm:text-4xl font-black text-white font-heading">
+                7,500+
+              </div>
+              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
+                Domestic Households
+              </div>
+            </div>
+
+            <div className="p-4">
+              <div className="text-3xl sm:text-4xl font-black text-white font-heading">
+                2,500+
+              </div>
+              <div className="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">
+                Commercial Clients
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Core Business Focus & Allied Offerings */}
       <section className="py-20 bg-surface-light border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
