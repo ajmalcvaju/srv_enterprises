@@ -147,38 +147,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. Mission & Vision */}
-      <section className="py-14 sm:py-16 bg-white border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface-light rounded-3xl p-8 sm:p-10 border border-slate-200">
-              <div className="w-12 h-12 rounded-2xl bg-royal/10 text-royal flex items-center justify-center mb-6">
-                <Target className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold text-navy font-heading mb-3">
-                Our Mission
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                To guarantee pure, healthy, and chemical-free drinking and utility water to every household, commercial establishment, and institution in Kerala through accessible, high-efficiency engineering and dedicated doorstep maintenance.
-              </p>
-            </div>
-
-            <div className="bg-surface-light rounded-3xl p-8 sm:p-10 border border-slate-200">
-              <div className="w-12 h-12 rounded-2xl bg-aqua/20 text-aqua-dark flex items-center justify-center mb-6">
-                <Eye className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold text-navy font-heading mb-3">
-                Our Vision
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                To be the undisputed standard for sustainable water treatment and home infrastructure in the region, recognized for transparent testing, durable build quality, and lasting customer relationships across our growing network.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Company Introduction & Background (Grounding in Notice) */}
+      {/* 3. Company Introduction & Background (Grounding in Notice) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -246,6 +215,37 @@ export default function AboutPage() {
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Mission & Vision */}
+      <section className="py-14 sm:py-16 bg-surface-light border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-royal/10 text-royal flex items-center justify-center mb-6">
+                <Target className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold text-navy font-heading mb-3">
+                Our Mission
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                To guarantee pure, healthy, and chemical-free drinking and utility water to every household, commercial establishment, and institution in Kerala through accessible, high-efficiency engineering and dedicated doorstep maintenance.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-aqua/20 text-aqua-dark flex items-center justify-center mb-6">
+                <Eye className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold text-navy font-heading mb-3">
+                Our Vision
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                To be the undisputed standard for sustainable water treatment and home infrastructure in the region, recognized for transparent testing, durable build quality, and lasting customer relationships across our growing network.
+              </p>
             </div>
           </div>
         </div>
