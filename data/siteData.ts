@@ -364,6 +364,27 @@ export const PRODUCTS: ProductItem[] = [
 
   // Primary Category 2: Water Treatment Plants
   {
+    id: "aquaan-500lph-ro-plant",
+    name: "Aquaan 500 LPH Commercial RO Plant",
+    category: "plants",
+    categoryLabel: "Water Treatment Plant",
+    tagline: "Industrial SS Skid with Dual Media Sand & Carbon Pre-Treatment",
+    description: "High-efficiency 500 Liters Per Hour commercial reverse osmosis system by Aquaan featuring high-grade stainless steel skid, dual blue FRP sand and activated carbon filtration vessels, digital microprocessor automation panel, and high-pressure vertical multistage pump.",
+    image: "/images/aquaan-500lph-ro-plant.webp",
+    features: [
+      "500 Liters Per Hour (LPH) High-Recovery Output",
+      "Dual FRP Pre-Filtration Vessels (Sand Filter + Carbon Filter)",
+      "Digital Microprocessor Automation Control Panel with Mimic Display",
+      "High-Pressure Vertical Multistage Stainless Steel Booster Pump",
+      "Dual Rotameter Flow Meters & Stainless Steel Pressure Gauges",
+      "Rugged SS 304 Skid Chassis for Space-Efficient Floor Mounting",
+      "SRV Certified Turnkey On-Site Installation & AMC Support",
+    ],
+    isPrimary: true,
+    badge: "500 LPH Skid",
+    suitableFor: "Hotels, Hospitals, Resorts, Bottling Units, Colleges & Food Manufacturing",
+  },
+  {
     id: "commercial-ro-plant-250lph",
     name: "250 LPH Commercial RO Water Plant",
     category: "plants",
