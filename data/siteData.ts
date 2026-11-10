@@ -460,6 +460,27 @@ export const PRODUCTS: ProductItem[] = [
     badge: "Residential Hero",
     suitableFor: "Entire Houses, Homestays, Hostels, Apartments",
   },
+  {
+    id: "electronic-water-conditioner-dual-stage",
+    name: "Electronic Water Conditioner with Dual-Stage Filtration",
+    category: "plants",
+    categoryLabel: "Water Treatment Plant",
+    tagline: "Chemical-Free Anti-Scale Electronic Conditioner & Dual Jumbo Filter",
+    description: "Advanced wall-mounted water treatment system combining dual high-capacity 20-inch sediment and carbon filter housings with an intelligent electronic anti-scale water conditioner to prevent lime-scale buildup in pipes, geysers, and appliances without salt or chemicals.",
+    image: "/images/electronic-water-conditioner-dual-stage.webp",
+    features: [
+      "Microprocessor Electronic Scale Prevention (Chemical & Salt Free)",
+      "Dual 20\" High-Flow Filter Housings (Sediment + Activated Carbon)",
+      "Smart Wall-Mount Controller with Dual Status LEDs (Power / Active)",
+      "Flow-Coupled Sensor & Inline Service Dispensing Tap",
+      "Protects Geysers, Solar Water Heaters, Washing Machines & Piping",
+      "Zero Water Wastage & Maintenance-Free Eco Operation",
+      "Professional Doorstep Wall-Mount Installation by SRV Enterprises",
+    ],
+    isPrimary: true,
+    badge: "Scale Prevention",
+    suitableFor: "Villas, Homes with Hard Borewell Water, Apartments, Homestays & Commercial Kitchens",
+  },
 
   // Core Product: Solar Water Heater & Solar Power
   {
