@@ -525,6 +525,27 @@ export const PRODUCTS: ProductItem[] = [
 
   // Core Product: Solar Water Heater & Solar Power
   {
+    id: "supreme-solar-water-heater",
+    name: "Supreme Solar AMRO PLUS Solar Water Heater",
+    category: "solar",
+    categoryLabel: "Solar Water Heaters",
+    tagline: "High-Efficiency Evacuated Tube System with SS Insulated Tank",
+    description: "Rooftop solar water heating system by Supreme Solar featuring high-absorption three-target borosilicate glass vacuum tubes, food-grade insulated stainless steel tank, and heavy-duty weather-resistant frame. Integrates seamlessly with overhead storage tanks for 24/7 hot water.",
+    image: "/images/supreme-solar-water-heater.webp",
+    features: [
+      "Supreme Solar High-Efficiency Borosilicate Three-Target Vacuum Tubes",
+      "High-Density PUF Insulated Tank for Retaining Hot Water 24+ Hours",
+      "Food-Grade Stainless Steel Inner Tank with High Corrosion Resistance",
+      "Rugged Powder-Coated All-Weather Roof Mounting Support Stand",
+      "Seamless Gravity & Pressure Integration with Overhead Storage Tanks",
+      "Saves up to 80% on Water Heating Electricity Bills with On-Site Warranty",
+      "Complete Roof Structural Installation & Plumbing by SRV Enterprises",
+    ],
+    isPrimary: true,
+    badge: "Supreme Solar",
+    suitableFor: "Villas, Independent Houses, Homestays, Eco-Resorts, Hostels & Hospitals",
+  },
+  {
     id: "solar-water-heater-system",
     name: "Advanced Solar Water Heater with SS Tank",
     category: "solar",
