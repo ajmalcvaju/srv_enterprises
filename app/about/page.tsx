@@ -109,7 +109,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-royal/10 text-royal text-xs font-bold uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
                 <span>Our Engineering Story</span>
@@ -132,7 +132,7 @@ export default function AboutPage() {
               </p>
 
               {/* Core Commitments from Notice */}
-              <div className="space-y-3 pt-2">
+              <div className="space-y-3 pt-2 text-left">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm text-slate-800 font-medium">
@@ -182,8 +182,8 @@ export default function AboutPage() {
       <section className="py-14 sm:py-16 bg-surface-light border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-royal/10 text-royal flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-royal/10 text-royal flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold text-navy font-heading mb-3">
@@ -194,8 +194,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-aqua/20 text-aqua-dark flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-aqua/20 text-aqua-dark flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Eye className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold text-navy font-heading mb-3">
