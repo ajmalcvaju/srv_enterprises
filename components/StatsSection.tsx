@@ -114,9 +114,9 @@ export default function StatsSection() {
         {/* 2 Primary Core Cards with Integrated Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 max-w-5xl mx-auto mb-8">
           {/* Card 1: 10+ Years of Experience */}
-          <div className="relative group bg-gradient-to-br from-navy-800/90 to-navy-900/90 border border-white/10 hover:border-aqua/40 rounded-3xl p-8 sm:p-10 shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+          <div className="relative group bg-gradient-to-br from-navy-800/90 to-navy-900/90 border border-white/10 hover:border-aqua/40 rounded-3xl p-8 sm:p-10 shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between text-center md:text-left">
             <div>
-              <div className="flex items-start justify-between mb-6">
+              <div className="flex flex-col items-center gap-3 md:flex-row md:items-start md:justify-between mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-royal to-aqua/40 flex items-center justify-center text-white shadow-royal">
                   <Award className="w-7 h-7 text-white" />
                 </div>
@@ -126,7 +126,7 @@ export default function StatsSection() {
               </div>
 
               <div className="space-y-2">
-                <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-white font-heading tracking-tight flex items-baseline gap-1">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-white font-heading tracking-tight flex items-baseline justify-center md:justify-start gap-1">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-aqua">
                     {years}
                   </span>
@@ -142,7 +142,7 @@ export default function StatsSection() {
 
               {/* Sub-highlights */}
               <div className="grid grid-cols-2 gap-3 mt-6 pt-5 border-t border-white/10">
-                <div className="bg-navy-950/60 p-3.5 rounded-2xl border border-white/10">
+                <div className="bg-navy-950/60 p-3.5 rounded-2xl border border-white/10 text-center md:text-left">
                   <div className="text-xl sm:text-2xl font-black text-white font-heading">
                     100%
                   </div>
@@ -152,7 +152,7 @@ export default function StatsSection() {
                   <div className="text-[11px] text-slate-400">Natural Media Filtration</div>
                 </div>
 
-                <div className="bg-navy-950/60 p-3.5 rounded-2xl border border-white/10">
+                <div className="bg-navy-950/60 p-3.5 rounded-2xl border border-white/10 text-center md:text-left">
                   <div className="text-xl sm:text-2xl font-black text-white font-heading">
                     24/7
                   </div>
@@ -164,16 +164,16 @@ export default function StatsSection() {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-aqua font-semibold">
+            <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-center md:justify-start gap-2 text-xs text-aqua font-semibold">
               <CheckCircle2 className="w-4 h-4 text-aqua shrink-0" />
               <span>Dedicated Technical Support & AMC Service</span>
             </div>
           </div>
 
           {/* Card 2: 10,000+ Customers with 7500+ Domestic & 2500+ Commercial Breakdown */}
-          <div className="relative group bg-gradient-to-br from-navy-800/90 to-navy-900/90 border border-white/10 hover:border-aqua/40 rounded-3xl p-8 sm:p-10 shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+          <div className="relative group bg-gradient-to-br from-navy-800/90 to-navy-900/90 border border-white/10 hover:border-aqua/40 rounded-3xl p-8 sm:p-10 shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between text-center md:text-left">
             <div>
-              <div className="flex items-start justify-between mb-6">
+              <div className="flex flex-col items-center gap-3 md:flex-row md:items-start md:justify-between mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-aqua/30 to-royal flex items-center justify-center text-white shadow-glow">
                   <Users className="w-7 h-7 text-aqua" />
                 </div>
@@ -183,7 +183,7 @@ export default function StatsSection() {
               </div>
 
               <div className="space-y-2">
-                <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-white font-heading tracking-tight flex items-baseline gap-1">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-white font-heading tracking-tight flex items-baseline justify-center md:justify-start gap-1">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-aqua">
                     {customers.toLocaleString()}
                   </span>
@@ -200,14 +200,14 @@ export default function StatsSection() {
               {/* Verified Customer Breakdown: 7,500+ Domestic & 2,500+ Commercial */}
               <div className="grid grid-cols-2 gap-3 mt-6 pt-5 border-t border-white/10">
                 {/* 7,500+ Domestic Customers */}
-                <div className="bg-navy-950/70 p-3.5 rounded-2xl border border-aqua/30 relative overflow-hidden group/sub">
-                  <div className="flex items-center gap-1.5 text-aqua mb-1">
+                <div className="bg-navy-950/70 p-3.5 rounded-2xl border border-aqua/30 relative overflow-hidden group/sub text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-1.5 text-aqua mb-1">
                     <Home className="w-3.5 h-3.5 text-aqua shrink-0" />
                     <span className="text-[10px] uppercase font-bold tracking-wider text-aqua">
                       Domestic
                     </span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-black text-white font-heading tracking-tight flex items-baseline">
+                  <div className="text-2xl sm:text-3xl font-black text-white font-heading tracking-tight flex items-baseline justify-center md:justify-start">
                     <span>{domestic.toLocaleString()}</span>
                     <span className="text-aqua text-lg sm:text-xl font-bold">+</span>
                   </div>
@@ -220,14 +220,14 @@ export default function StatsSection() {
                 </div>
 
                 {/* 2,500+ Commercial Customers */}
-                <div className="bg-navy-950/70 p-3.5 rounded-2xl border border-royal/40 relative overflow-hidden group/sub">
-                  <div className="flex items-center gap-1.5 text-royal-light mb-1">
+                <div className="bg-navy-950/70 p-3.5 rounded-2xl border border-royal/40 relative overflow-hidden group/sub text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-1.5 text-royal-light mb-1">
                     <Building2 className="w-3.5 h-3.5 text-royal-light shrink-0" />
                     <span className="text-[10px] uppercase font-bold tracking-wider text-royal-light">
                       Commercial
                     </span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-black text-white font-heading tracking-tight flex items-baseline">
+                  <div className="text-2xl sm:text-3xl font-black text-white font-heading tracking-tight flex items-baseline justify-center md:justify-start">
                     <span>{commercial.toLocaleString()}</span>
                     <span className="text-royal-light text-lg sm:text-xl font-bold">+</span>
                   </div>
@@ -241,7 +241,7 @@ export default function StatsSection() {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-aqua font-semibold">
+            <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-center md:justify-start gap-2 text-xs text-aqua font-semibold">
               <CheckCircle2 className="w-4 h-4 text-aqua shrink-0" />
               <span>Prompt Doorstep Assistance & Free Purity Testing</span>
             </div>
