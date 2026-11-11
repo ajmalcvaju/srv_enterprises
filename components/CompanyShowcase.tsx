@@ -121,7 +121,7 @@ export default function CompanyShowcase() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-white/10 gap-6">
+        <div className="flex flex-col items-center text-center md:flex-row md:items-end md:text-left justify-between mb-14 pb-6 border-b border-white/10 gap-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-aqua/30 text-aqua text-xs sm:text-sm font-semibold tracking-wide mb-4">
               <Sparkles className="w-4 h-4 text-aqua animate-pulse" />
@@ -137,7 +137,7 @@ export default function CompanyShowcase() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-glow hover:shadow-royal shrink-0 self-start md:self-end"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-glow hover:shadow-royal shrink-0 self-center md:self-end"
           >
             <span>Book Your Free Site Survey</span>
             <ArrowRight className="w-4 h-4" />
