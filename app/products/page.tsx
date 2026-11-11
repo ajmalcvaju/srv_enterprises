@@ -3,7 +3,6 @@
 import React, { useState, useMemo } from "react";
 import {
   Search,
-  Filter,
   Droplets,
   Cpu,
   Sun,
@@ -11,20 +10,16 @@ import {
   Zap,
   Wind,
   Box,
-  MessageCircle,
   X,
-  CheckCircle2,
   Sparkles,
-  ArrowRight,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import BrandShowcase from "@/components/BrandShowcase";
-import { PRODUCTS, ProductItem, COMPANY_INFO } from "@/data/siteData";
+import { PRODUCTS } from "@/data/siteData";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [modalProduct, setModalProduct] = useState<ProductItem | null>(null);
 
   const categories = [
     { id: "all", label: "All Solutions", icon: Sparkles, count: PRODUCTS.length },
@@ -203,11 +198,7 @@ export default function ProductsPage() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onOpenDetails={(p) => setModalProduct(p)}
-                />
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
           )}
@@ -216,73 +207,6 @@ export default function ProductsPage() {
 
       {/* 3.5 Official Brand Partners Showcase */}
       <BrandShowcase />
-
-      {/* 4. Product Details Modal */}
-      {modalProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-navy-950/80 backdrop-blur-sm">
-          <div className="relative bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-elevated border border-slate-200 overflow-hidden animate-fade-in">
-            <button
-              onClick={() => setModalProduct(null)}
-              className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-navy hover:bg-slate-100"
-              aria-label="Close details modal"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div className="bg-slate-100 p-6 rounded-2xl flex items-center justify-center h-64">
-                <img
-                  src={modalProduct.image}
-                  alt={modalProduct.name}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-
-              <div className="space-y-4">
-                <span className="text-xs font-bold text-royal bg-royal/10 px-3 py-1 rounded-full uppercase">
-                  {modalProduct.categoryLabel}
-                </span>
-
-                <h3 className="text-xl font-black text-navy font-heading">
-                  {modalProduct.name}
-                </h3>
-
-                <p className="text-xs text-slate-500 font-medium">
-                  {modalProduct.tagline}
-                </p>
-
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {modalProduct.description}
-                </p>
-
-                <div className="space-y-1.5 pt-2">
-                  <div className="text-xs font-bold text-slate-900">Key Features:</div>
-                  {modalProduct.features.map((f, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-royal shrink-0" />
-                      <span>{f}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pt-3">
-                  <a
-                    href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
-                      `Hi SRV ENTERPRISES, I would like to inquire about specifications and pricing for "${modalProduct.name}".`
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3 px-5 rounded-xl text-sm transition-all shadow-md"
-                  >
-                    <MessageCircle className="w-4 h-4 fill-current" />
-                    <span>Enquire on WhatsApp Now</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
