@@ -235,7 +235,7 @@ export default function MainCategories() {
 
         {/* Specialized Architectural Infrastructure Bar */}
         <div className="bg-navy rounded-3xl p-6 sm:p-8 text-white shadow-elevated border border-navy-700/80">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="flex flex-col items-center text-center lg:flex-row lg:items-center lg:text-left justify-between gap-6">
             <div className="max-w-2xl">
               <span className="text-[11px] font-black uppercase tracking-widest text-aqua bg-aqua/10 px-3 py-1 rounded-full border border-aqua/20 inline-block mb-2">
                 Allied Architectural Solutions
@@ -248,7 +248,7 @@ export default function MainCategories() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 shrink-0">
               <Link
                 href="/products?category=tanks"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-5 py-3 rounded-xl text-xs sm:text-sm shadow-royal hover:shadow-glow transition-all"
