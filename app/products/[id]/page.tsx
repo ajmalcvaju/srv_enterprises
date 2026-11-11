@@ -14,6 +14,7 @@ import {
   Award,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import ProductImageGallery from "@/components/ProductImageGallery";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { COMPANY_INFO, PRODUCTS } from "@/data/siteData";
 
@@ -111,24 +112,16 @@ export default function ProductDetailsPage({ params }: ProductDetailsPageProps) 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column: Product Image Stage & Assurance Badges */}
             <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-24">
-              <div className="relative rounded-3xl border border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50 p-6 sm:p-10 flex items-center justify-center min-h-[320px] sm:min-h-[420px] shadow-sm overflow-hidden">
-                <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2 items-center">
-                  <span className="text-xs font-bold text-navy bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-xs">
-                    {product.categoryLabel}
-                  </span>
-                  {product.badge && (
-                    <span className="text-[11px] font-extrabold text-white bg-royal px-3 py-1 rounded-full shadow-xs uppercase tracking-wide">
-                      {product.badge}
-                    </span>
-                  )}
-                </div>
-
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="max-h-[340px] sm:max-h-[380px] w-full object-contain drop-shadow-md"
-                />
-              </div>
+              <ProductImageGallery
+                images={
+                  product.galleryImages && product.galleryImages.length > 0
+                    ? product.galleryImages
+                    : [product.image]
+                }
+                productName={product.name}
+                categoryLabel={product.categoryLabel}
+                badge={product.badge}
+              />
 
               {/* Quick Trust Strip */}
               <div className="grid grid-cols-3 gap-3">

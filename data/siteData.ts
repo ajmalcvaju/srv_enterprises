@@ -162,6 +162,7 @@ export interface ProductItem {
   tagline: string;
   description: string;
   image: string;
+  galleryImages?: string[];
   features: string[];
   isPrimary: boolean;
   isFeatured?: boolean;
@@ -476,6 +477,30 @@ export const PRODUCTS: ProductItem[] = [
     isPrimary: true,
     badge: "25-Yr Performance",
     suitableFor: "Villas, Commercial Buildings, Resorts, Institutions",
+  },
+  {
+    id: "solar-street-lamp-radar-induction",
+    name: "All-In-One Solar Street Lamp (Radar Induction)",
+    category: "solar",
+    categoryLabel: "Solar Street Lighting",
+    tagline: "Integrated Solar Panel • Radar Motion Sensor • 60-LED High Lumen",
+    description: "Weatherproof all-in-one outdoor solar street light featuring a high-brightness 60-LED array, intelligent radar motion induction sensor with digital indicator and ON/OFF switch, rear integrated solar PV panel, and heavy-duty pole/wall mounting arm.",
+    image: "/images/solar-street-lamp-radar-front.jpg",
+    galleryImages: [
+      "/images/solar-street-lamp-radar-front.jpg",
+      "/images/solar-street-lamp-radar-back.jpg",
+    ],
+    features: [
+      "All-In-One Unit with Integrated Rear Solar PV Charging Panel",
+      "60 High-Brightness SMD LED Array for Wide Outdoor Illumination",
+      "Built-In Radar Motion Induction Sensor & Digital Status Display",
+      "One-Touch Master ON/OFF Switch & Automatic Dusk-to-Dawn Operation",
+      "Weatherproof Ribbed Outdoor Casing with 4-Bolt Pole/Wall Mount",
+      "Zero Trenching or Electrical Wiring — Supply & Fitting by SRV Enterprises",
+    ],
+    isPrimary: true,
+    badge: "Radar Induction",
+    suitableFor: "Residential Gates, Driveways, Farms, Estates, Resorts & Street Pathways",
   },
 
   // Core Product: CCTV Cameras
