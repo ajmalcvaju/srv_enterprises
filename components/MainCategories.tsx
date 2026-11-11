@@ -248,7 +248,7 @@ export default function MainCategories() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 shrink-0">
+            <div className="w-full lg:w-auto flex flex-wrap items-center justify-center lg:justify-end gap-3 shrink-0">
               <Link
                 href="/products?category=tanks"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-5 py-3 rounded-xl text-xs sm:text-sm shadow-royal hover:shadow-glow transition-all"
