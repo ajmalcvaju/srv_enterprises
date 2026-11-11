@@ -28,9 +28,9 @@ export default function BrandShowcase() {
     const updateItemsPerView = () => {
       if (typeof window !== "undefined") {
         if (window.innerWidth < 640) {
-          setItemsPerView(1.2); // Mobile: single card with peek
+          setItemsPerView(1); // Mobile: single centered card
         } else if (window.innerWidth < 1024) {
-          setItemsPerView(2.5); // Tablet: 2.5 cards
+          setItemsPerView(2); // Tablet: 2 cards
         } else if (window.innerWidth < 1280) {
           setItemsPerView(4); // Small Desktop: 4 cards
         } else {
@@ -93,7 +93,7 @@ export default function BrandShowcase() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div className="flex flex-col items-center text-center md:flex-row md:items-end md:text-left justify-between mb-10 gap-6">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal/10 text-royal text-xs font-bold uppercase tracking-wider mb-3">
               <Sparkles className="w-3.5 h-3.5 text-royal" />
@@ -108,7 +108,7 @@ export default function BrandShowcase() {
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center gap-3 self-start md:self-auto shrink-0">
+          <div className="flex items-center gap-3 self-center md:self-auto shrink-0">
             <button
               onClick={() => setIsPaused((prev) => !prev)}
               className="p-2.5 rounded-xl border border-slate-300 bg-white text-slate-600 hover:text-royal hover:border-royal/40 transition-colors shadow-sm"
@@ -138,7 +138,7 @@ export default function BrandShowcase() {
 
         {/* Carousel Container */}
         <div
-          className="relative overflow-hidden py-3 -my-3"
+          className="relative overflow-hidden py-3 -my-3 -mx-2 sm:-mx-2.5"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}
@@ -146,7 +146,7 @@ export default function BrandShowcase() {
           onTouchEnd={handleTouchEnd}
         >
           <div
-            className="flex transition-transform duration-500 ease-out gap-4 sm:gap-5"
+            className="flex transition-transform duration-500 ease-out"
             style={{
               transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
             }}
@@ -159,9 +159,9 @@ export default function BrandShowcase() {
               return (
                 <div
                   key={`${brand.name}-${idx}`}
-                  className="shrink-0 transition-all duration-300"
+                  className="shrink-0 px-2 sm:px-2.5 transition-all duration-300"
                   style={{
-                    width: `calc(${100 / itemsPerView}% - ${(4 * (itemsPerView - 1)) / itemsPerView}px)`,
+                    width: `${100 / itemsPerView}%`,
                   }}
                 >
                   <div className="group h-full bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-card hover:border-royal/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
@@ -182,12 +182,11 @@ export default function BrandShowcase() {
                         src={brand.logoImage}
                         alt={`${brand.name} - Authorized Products & Service`}
                         className="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
                       />
                     </div>
 
                     {/* Brand Info & Action */}
-                    <div className="mt-4 pt-3 border-t border-slate-100">
+                    <div className="mt-4 pt-3 border-t border-slate-100 text-center sm:text-left">
                       <h3 className="font-heading font-extrabold text-navy text-base sm:text-lg group-hover:text-royal transition-colors">
                         {brand.name}
                       </h3>
@@ -199,10 +198,10 @@ export default function BrandShowcase() {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3.5 w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-50 hover:bg-royal text-slate-700 hover:text-white text-xs font-semibold border border-slate-200 hover:border-royal transition-all duration-200"
+                        className="group/btn mt-3.5 w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-50 hover:bg-royal text-slate-700 hover:text-white text-xs font-semibold border border-slate-200 hover:border-royal transition-all duration-200"
                         title={`Enquire for ${brand.name} Sales or Service`}
                       >
-                        <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white fill-current" />
+                        <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] group-hover/btn:text-white fill-current shrink-0 transition-colors" />
                         <span>Service &amp; Spares</span>
                       </a>
                     </div>
