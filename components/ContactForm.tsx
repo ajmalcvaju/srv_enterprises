@@ -35,6 +35,18 @@ export default function ContactForm() {
     return errs;
   };
 
+  const buildWhatsAppUrl = (ticket: string) => {
+    const text = `*New Website Enquiry [#${ticket}]*%0A%0A*Name:* ${encodeURIComponent(
+      formData.name.trim()
+    )}%0A*Phone:* ${encodeURIComponent(formData.phone.trim())}%0A*Email:* ${encodeURIComponent(
+      formData.email.trim() || "Not provided"
+    )}%0A*Service Required:* ${encodeURIComponent(
+      formData.service
+    )}%0A*Message:* ${encodeURIComponent(formData.message.trim())}`;
+
+    return `https://wa.me/${COMPANY_INFO.whatsapp}?text=${text}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -47,18 +59,11 @@ export default function ContactForm() {
     const generatedTicket = "SRV-" + Math.floor(100000 + Math.random() * 900000);
     setTicketId(generatedTicket);
     setIsSubmitted(true);
+    window.location.href = buildWhatsAppUrl(generatedTicket);
   };
 
   const sendDirectViaWhatsApp = () => {
-    const text = `*New Website Enquiry [#${ticketId || "SRV-WEB"}]*%0A%0A*Name:* ${encodeURIComponent(
-      formData.name
-    )}%0A*Phone:* ${encodeURIComponent(formData.phone)}%0A*Email:* ${encodeURIComponent(
-      formData.email || "Not provided"
-    )}%0A*Service Required:* ${encodeURIComponent(
-      formData.service
-    )}%0A*Message:* ${encodeURIComponent(formData.message)}`;
-
-    window.open(`https://wa.me/${COMPANY_INFO.whatsapp}?text=${text}`, "_blank");
+    window.location.href = buildWhatsAppUrl(ticketId || "SRV-WEB");
   };
 
   return (
