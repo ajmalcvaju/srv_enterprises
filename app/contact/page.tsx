@@ -197,9 +197,44 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: Working Contact Form */}
-            <div className="lg:col-span-7">
+            {/* Right: Working Contact Form & Showroom Visual Card */}
+            <div className="lg:col-span-7 space-y-6">
               <ContactForm />
+
+              {/* Showroom Storefront Showcase */}
+              <div className="bg-white rounded-3xl border border-slate-200/90 shadow-card overflow-hidden">
+                <div className="relative bg-slate-100 overflow-hidden">
+                  <img
+                    src="/images/srv-showroom-front.jpg"
+                    alt="SRV ENTERPRISES Sales & Service Showroom - Sultan Bathery"
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 left-3 bg-navy/90 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/15">
+                    Sultan Bathery Showroom
+                  </div>
+                </div>
+                <div className="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <h3 className="font-extrabold text-navy text-base font-heading">
+                      Technology Display &amp; Service Showroom
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      {COMPANY_INFO.address.building}, {COMPANY_INFO.address.landmark}, {COMPANY_INFO.address.road}, {COMPANY_INFO.address.city}
+                    </p>
+                  </div>
+                  <a
+                    href={COMPANY_INFO.googleMapsDirectionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-royal hover:text-navy bg-royal/10 hover:bg-royal/15 px-3.5 py-2 rounded-xl transition-colors shrink-0"
+                  >
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>Visit Showroom</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
