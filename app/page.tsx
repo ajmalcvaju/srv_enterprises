@@ -124,8 +124,8 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Reason 1 */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300">
-              <div className="w-12 h-12 rounded-2xl bg-royal/10 text-royal flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-royal/10 text-royal flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Award className="w-6 h-6 text-royal" />
               </div>
               <h3 className="text-xl font-bold text-navy font-heading mb-2">
@@ -137,8 +137,8 @@ export default function HomePage() {
             </div>
 
             {/* Reason 2 */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300">
-              <div className="w-12 h-12 rounded-2xl bg-aqua/20 text-aqua-dark flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-aqua/20 text-aqua-dark flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Users className="w-6 h-6 text-aqua-dark" />
               </div>
               <h3 className="text-xl font-bold text-navy font-heading mb-2">
@@ -150,8 +150,8 @@ export default function HomePage() {
             </div>
 
             {/* Reason 3 */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <ShieldCheck className="w-6 h-6 text-emerald-600" />
               </div>
               <h3 className="text-xl font-bold text-navy font-heading mb-2">
@@ -163,8 +163,8 @@ export default function HomePage() {
             </div>
 
             {/* Reason 4 */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300">
-              <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Droplets className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-navy font-heading mb-2">
@@ -176,8 +176,8 @@ export default function HomePage() {
             </div>
 
             {/* Reason 5 */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300">
-              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Wrench className="w-6 h-6 text-amber-600" />
               </div>
               <h3 className="text-xl font-bold text-navy font-heading mb-2">
@@ -189,8 +189,8 @@ export default function HomePage() {
             </div>
 
             {/* Reason 6 */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300">
-              <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-soft hover:shadow-card transition-all duration-300 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 mx-auto md:mx-0">
                 <Sparkles className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-navy font-heading mb-2">
