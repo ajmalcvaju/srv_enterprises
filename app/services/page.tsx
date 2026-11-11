@@ -130,8 +130,8 @@ export default function ServicesPage() {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     {/* Left: Icon & Title */}
-                    <div className="lg:col-span-5 space-y-4">
-                      <div className="flex items-center gap-3">
+                    <div className="lg:col-span-5 space-y-4 text-center lg:text-left">
+                      <div className="flex flex-col lg:flex-row items-center gap-3">
                         <div className="w-14 h-14 rounded-2xl bg-royal/10 text-royal flex items-center justify-center shrink-0">
                           <Icon className="w-7 h-7 text-royal" />
                         </div>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                         {service.description}
                       </p>
 
-                      <div className="pt-2">
+                      <div className="pt-2 flex justify-center lg:justify-start">
                         <a
                           href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi%20SRV%20ENTERPRISES,%20I%20am%20inquiring%20about%20your%20service:%20${encodeURIComponent(
                             service.title
