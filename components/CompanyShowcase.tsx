@@ -239,7 +239,7 @@ export default function CompanyShowcase() {
                 </div>
 
                 {/* Content Card Body */}
-                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between bg-[#071C35]">
+                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between bg-[#071C35] text-center md:text-left">
                   <div className="space-y-3">
                     <span
                       className={`text-xs font-semibold px-2.5 py-1 rounded-full border inline-block ${item.badgeColor}`}
@@ -257,7 +257,7 @@ export default function CompanyShowcase() {
                   </div>
 
                   {/* Feature Pills */}
-                  <div className="pt-4 border-t border-white/15 flex flex-wrap gap-2">
+                  <div className="pt-4 border-t border-white/15 flex flex-wrap justify-center md:justify-start gap-2">
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
@@ -275,7 +275,7 @@ export default function CompanyShowcase() {
 
         {/* Bottom Trust Banner */}
         <div className="mt-12 p-6 rounded-2xl bg-[#071C35] border border-white/15 shadow-card flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-royal/20 text-aqua flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6 text-aqua" />
             </div>
