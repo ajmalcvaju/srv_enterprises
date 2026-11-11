@@ -112,7 +112,7 @@ export default function ProductsPage() {
       </section>
 
       {/* 2. Interactive Search & Category Filter Navigation */}
-      <section className="bg-white border-b border-slate-200 sticky top-16 sm:top-[73px] z-30 shadow-sm py-4">
+      <section className="relative bg-white border-b border-slate-200 shadow-sm py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           {/* Top Row: Search input */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
