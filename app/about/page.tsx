@@ -11,7 +11,6 @@ import {
   Eye,
   CheckCircle2,
   Phone,
-  MessageCircle,
   Sparkles,
   MapPin,
   Clock,
@@ -19,6 +18,7 @@ import {
 } from "lucide-react";
 import { COMPANY_INFO, SUPPORTED_BRANDS } from "@/data/siteData";
 import AboutStatsCounter from "@/components/AboutStatsCounter";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "About Us | 10+ Years of Engineering Excellence",
@@ -376,7 +376,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-7 py-3.5 rounded-xl text-sm shadow-royal hover:shadow-glow transition-all"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Contact via WhatsApp</span>
             </a>
 

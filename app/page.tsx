@@ -9,7 +9,6 @@ import {
   Cpu,
   ArrowRight,
   Phone,
-  MessageCircle,
   Sparkles,
   Settings,
   HelpCircle,
@@ -25,6 +24,7 @@ import NoticeShowcase from "@/components/NoticeShowcase";
 import ProductCard from "@/components/ProductCard";
 import BrandShowcase from "@/components/BrandShowcase";
 import CompanyShowcase from "@/components/CompanyShowcase";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import {
   COMPANY_INFO,
   PRODUCTS,
@@ -347,7 +347,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-8 py-4 rounded-xl text-sm sm:text-base shadow-royal hover:shadow-glow transition-all transform hover:-translate-y-0.5"
             >
-              <MessageCircle className="w-5 h-5 fill-current" />
+              <WhatsAppIcon className="w-5 h-5 fill-current" />
               <span>Get a Free Quote</span>
             </a>
 

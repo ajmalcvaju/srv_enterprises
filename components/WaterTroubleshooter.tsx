@@ -6,10 +6,10 @@ import {
   AlertTriangle,
   CheckCircle2,
   ArrowRight,
-  MessageCircle,
   Sparkles,
 } from "lucide-react";
 import { WATER_PROBLEMS, COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function WaterTroubleshooter() {
   const [selectedProblem, setSelectedProblem] = useState(WATER_PROBLEMS[0]);
@@ -122,7 +122,7 @@ export default function WaterTroubleshooter() {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-6 py-3 rounded-xl text-sm shadow-royal hover:shadow-glow transition-all"
                   >
-                    <MessageCircle className="w-4 h-4 text-navy-950" />
+                    <WhatsAppIcon className="w-4 h-4 text-navy-950 fill-current" />
                     <span>Enquire on WhatsApp</span>
                   </a>
 

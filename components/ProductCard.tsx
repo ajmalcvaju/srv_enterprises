@@ -3,8 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { MessageCircle, CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { ProductItem, COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 interface ProductCardProps {
   product: ProductItem;
@@ -107,7 +108,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="inline-flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-2.5 sm:py-3 px-2.5 rounded-xl text-xs whitespace-nowrap shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
             title="Enquire on WhatsApp"
           >
-            <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current shrink-0" />
+            <WhatsAppIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current shrink-0" />
             <span>Enquire Now</span>
           </a>
 

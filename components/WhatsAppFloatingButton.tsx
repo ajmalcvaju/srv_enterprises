@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function WhatsAppFloatingButton() {
   const [showTooltip, setShowTooltip] = useState(true);
@@ -37,7 +38,7 @@ export default function WhatsAppFloatingButton() {
         aria-label="Chat on WhatsApp with SRV Enterprises"
         title="Chat on WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 fill-current" />
+        <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7 fill-white text-white" />
       </a>
     </div>
   );

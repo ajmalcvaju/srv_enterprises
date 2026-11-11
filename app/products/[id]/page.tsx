@@ -7,7 +7,6 @@ import {
   CheckCircle2,
   ChevronRight,
   MapPin,
-  MessageCircle,
   Phone,
   ShieldCheck,
   Sparkles,
@@ -15,6 +14,7 @@ import {
   Award,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { COMPANY_INFO, PRODUCTS } from "@/data/siteData";
 
 interface ProductDetailsPageProps {
@@ -212,7 +212,7 @@ export default function ProductDetailsPage({ params }: ProductDetailsPageProps) 
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3.5 px-6 rounded-xl text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
                   >
-                    <MessageCircle className="w-5 h-5 fill-current shrink-0" />
+                    <WhatsAppIcon className="w-5 h-5 fill-current shrink-0" />
                     <span>Enquire Now on WhatsApp</span>
                   </a>
 

@@ -15,12 +15,12 @@ import {
   Layers,
   CheckCircle2,
   Phone,
-  MessageCircle,
   Sparkles,
   ArrowRight,
 } from "lucide-react";
 import { SERVICES, COMPANY_INFO } from "@/data/siteData";
 import WaterTdsCalculator from "@/components/WaterTdsCalculator";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Services | Water Purifiers, CCTV, Solar, Inverters & Kitchen Engineering",
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-6 py-2.5 sm:px-7 sm:py-3 rounded-xl text-xs sm:text-sm shadow-royal hover:shadow-glow transition-all"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Book Service on WhatsApp</span>
             </a>
             <a
@@ -160,7 +160,7 @@ export default function ServicesPage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-2.5 px-5 rounded-xl text-xs sm:text-sm shadow-sm transition-all"
                         >
-                          <MessageCircle className="w-4 h-4 fill-current" />
+                          <WhatsAppIcon className="w-4 h-4 fill-current" />
                           <span>Enquire on WhatsApp</span>
                         </a>
                       </div>
@@ -213,7 +213,7 @@ export default function ServicesPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-royal to-aqua text-navy-950 font-bold px-7 py-3.5 rounded-xl text-sm shadow-royal hover:shadow-glow transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Schedule Free Water Test</span>
                 </a>
                 <span className="text-xs text-slate-300">

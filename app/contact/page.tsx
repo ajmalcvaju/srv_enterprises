@@ -5,12 +5,12 @@ import {
   Mail,
   MapPin,
   Clock,
-  MessageCircle,
   ExternalLink,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { COMPANY_INFO } from "@/data/siteData";
 
 export const metadata: Metadata = {
@@ -139,7 +139,7 @@ export default function ContactPage() {
                 {/* WhatsApp Direct */}
                 <div className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-soft flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <MessageCircle className="w-6 h-6 fill-current" />
+                    <WhatsAppIcon className="w-6 h-6 fill-current" />
                   </div>
                   <div>
                     <h3 className="font-bold text-navy text-sm font-heading mb-1">

@@ -7,11 +7,11 @@ import {
   ArrowRight,
   CheckCircle2,
   Sparkles,
-  MessageCircle,
   HelpCircle,
   ShieldCheck,
 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function WaterTdsCalculator() {
   const [source, setSource] = useState<string>("borewell");
@@ -192,7 +192,7 @@ export default function WaterTdsCalculator() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold px-6 py-3 rounded-xl text-xs sm:text-sm shadow-royal hover:shadow-glow transition-all"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>Book Free Water Testing on WhatsApp</span>
               </a>
 

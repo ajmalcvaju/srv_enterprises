@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Sparkles, Phone, CheckCircle2, Send, MessageCircle } from "lucide-react";
+import { X, Sparkles, Phone, CheckCircle2, Send } from "lucide-react";
 import { COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -207,7 +208,7 @@ export default function QuoteModal({
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-royal to-aqua hover:from-royal-light hover:to-aqua-light text-navy-950 font-bold py-3.5 px-6 rounded-xl text-sm shadow-royal hover:shadow-glow transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   <span>Submit & Request Quote on WhatsApp</span>
                 </button>
               </div>

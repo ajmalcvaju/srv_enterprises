@@ -10,11 +10,11 @@ import {
   CheckCircle2,
   Wrench,
   ExternalLink,
-  MessageCircle,
   Play,
   Pause,
 } from "lucide-react";
 import { SUPPORTED_BRANDS, COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function BrandShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -202,7 +202,7 @@ export default function BrandShowcase() {
                         className="mt-3.5 w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-50 hover:bg-royal text-slate-700 hover:text-white text-xs font-semibold border border-slate-200 hover:border-royal transition-all duration-200"
                         title={`Enquire for ${brand.name} Sales or Service`}
                       >
-                        <MessageCircle className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" />
+                        <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white fill-current" />
                         <span>Service &amp; Spares</span>
                       </a>
                     </div>

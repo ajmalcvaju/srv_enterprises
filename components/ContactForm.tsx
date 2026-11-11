@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, AlertCircle, MessageCircle, PhoneCall } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, PhoneCall } from "lucide-react";
 import { COMPANY_INFO } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -99,7 +100,7 @@ export default function ContactForm() {
               onClick={sendDirectViaWhatsApp}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3 px-6 rounded-xl text-sm shadow-md transition-all"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Forward Reference to WhatsApp Now</span>
             </button>
 
@@ -301,7 +302,7 @@ export default function ContactForm() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3.5 px-5 rounded-xl text-sm transition-all"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>WhatsApp Direct</span>
             </a>
           </div>
