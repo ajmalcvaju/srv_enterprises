@@ -56,7 +56,7 @@ export default function AboutPage() {
     {
       title: "Technology Display & Service Showroom",
       caption: "Our official customer experience & sales center in Sultan Bathery",
-      image: "/images/purifier-showroom.png",
+      image: "/images/srv-showroom-front.jpg",
     },
   ];
 
