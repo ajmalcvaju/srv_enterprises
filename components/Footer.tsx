@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Top Achievement Banner */}
         <div className="bg-gradient-to-r from-navy-800 to-navy-700 border border-navy-600/60 rounded-2xl p-6 sm:p-8 mb-16 shadow-elevated">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-3 md:gap-4">
               <div className="w-14 h-14 rounded-xl bg-aqua/10 border border-aqua/30 flex items-center justify-center shrink-0">
                 <Award className="w-7 h-7 text-aqua" />
               </div>
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-3 md:gap-4">
               <div className="w-14 h-14 rounded-xl bg-royal/20 border border-royal/40 flex items-center justify-center shrink-0">
                 <Users className="w-7 h-7 text-aqua" />
               </div>
@@ -56,7 +56,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center md:justify-end">
+            <div className="flex items-center justify-center md:justify-end">
               <a
                 href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi%20SRV%20ENTERPRISES,%20I%20would%20like%20to%20get%20a%20free%20water%20consultation`}
                 target="_blank"

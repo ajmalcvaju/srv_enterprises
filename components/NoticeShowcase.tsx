@@ -14,9 +14,9 @@ export default function NoticeShowcase() {
           <div className="bg-gradient-to-r from-navy-900 via-navy-800 to-royal/90 rounded-3xl p-8 sm:p-12 text-white shadow-elevated relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               {/* Left Content */}
-              <div className="lg:col-span-7 space-y-4">
+              <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-aqua/20 text-aqua text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-aqua/30">
-                  <FileText className="w-4 h-4" />
+                  <FileText className="w-4 h-4 shrink-0" />
                   <span>Official Company Documentation</span>
                 </div>
 
@@ -29,25 +29,25 @@ export default function NoticeShowcase() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-center gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+                  <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
                     <CheckCircle2 className="w-4 h-4 text-aqua shrink-0" />
                     <span>Free water testing & problem diagnosis</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+                  <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
                     <CheckCircle2 className="w-4 h-4 text-aqua shrink-0" />
                     <span>Multi-brand purifier repair & maintenance</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+                  <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
                     <CheckCircle2 className="w-4 h-4 text-aqua shrink-0" />
                     <span>GSTIN: 32BTWJP14566QIZP Registered</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+                  <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 text-xs text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
                     <CheckCircle2 className="w-4 h-4 text-aqua shrink-0" />
                     <span>Sulthan Bathery • Mananthavady • Kalpetta • Dubai</span>
                   </div>
                 </div>
 
-                <div className="pt-4 flex flex-wrap items-center gap-3">
+                <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3">
                   <button
                     onClick={() => {
                       setActiveDoc("notice");
