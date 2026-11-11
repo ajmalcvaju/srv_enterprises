@@ -233,10 +233,10 @@ export default function HomePage() {
             {SERVICES.slice(0, 6).map((service) => (
               <div
                 key={service.id}
-                className="rounded-3xl p-8 bg-surface-light border border-slate-200/90 hover:border-royal/50 hover:bg-white shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between"
+                className="rounded-3xl p-8 bg-surface-light border border-slate-200/90 hover:border-royal/50 hover:bg-white shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between text-center md:text-left"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-center md:justify-between gap-2 mb-4">
                     <span className="text-[11px] font-bold text-royal bg-royal/10 px-3 py-1 rounded-full uppercase">
                       {service.highlight}
                     </span>
@@ -250,7 +250,7 @@ export default function HomePage() {
                     {service.shortDesc}
                   </p>
 
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-6 text-left max-w-xs mx-auto md:max-w-none md:mx-0">
                     {service.features.slice(0, 2).map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
                         <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
@@ -262,7 +262,7 @@ export default function HomePage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center text-xs font-bold text-royal hover:text-navy gap-1.5 pt-4 border-t border-slate-200"
+                  className="inline-flex items-center justify-center md:justify-start w-full md:w-auto text-xs font-bold text-royal hover:text-navy gap-1.5 pt-4 border-t border-slate-200"
                 >
                   <span>Learn more about service</span>
                   <ArrowRight className="w-3.5 h-3.5" />

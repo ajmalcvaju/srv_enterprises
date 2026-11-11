@@ -270,7 +270,7 @@ export default function BrandShowcase() {
 
         {/* Trust Guarantees Strip */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 border-t border-slate-200/60">
-          <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-3 p-4 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
             <div className="w-10 h-10 rounded-lg bg-royal/10 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-5 h-5 text-royal" />
             </div>
@@ -280,7 +280,7 @@ export default function BrandShowcase() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-3 p-4 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
             <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0">
               <CheckCircle2 className="w-5 h-5 text-emerald-600" />
             </div>
@@ -290,7 +290,7 @@ export default function BrandShowcase() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-3 p-4 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
             <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
               <Wrench className="w-5 h-5 text-amber-600" />
             </div>
@@ -300,7 +300,7 @@ export default function BrandShowcase() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-3 p-4 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
             <div className="w-10 h-10 rounded-lg bg-aqua/15 flex items-center justify-center shrink-0">
               <Award className="w-5 h-5 text-royal" />
             </div>

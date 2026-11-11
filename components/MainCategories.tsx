@@ -193,9 +193,9 @@ export default function MainCategories() {
                 </div>
 
                 {/* Content Area */}
-                <div className="p-6 sm:p-7">
-                  <div className="text-xs font-bold text-royal uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                    <Award className="w-3.5 h-3.5 text-royal" />
+                <div className="p-6 sm:p-7 text-center md:text-left">
+                  <div className="text-xs font-bold text-royal uppercase tracking-wider mb-1.5 flex items-center justify-center md:justify-start gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-royal shrink-0" />
                     <span>{div.tagline}</span>
                   </div>
 
@@ -208,7 +208,7 @@ export default function MainCategories() {
                   </p>
 
                   {/* Bullet Highlights */}
-                  <div className="space-y-2 pt-2 border-t border-slate-100">
+                  <div className="space-y-2 pt-2 border-t border-slate-100 text-left">
                     {div.features.map((feat, fIdx) => (
                       <div key={fIdx} className="flex items-start gap-2 text-xs text-slate-700">
                         <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
@@ -223,7 +223,7 @@ export default function MainCategories() {
               <div className="p-6 pt-0">
                 <Link
                   href={div.link}
-                  className="w-full inline-flex items-center justify-between bg-slate-50 group-hover:bg-royal text-navy group-hover:text-white font-bold py-3 px-5 rounded-2xl text-xs sm:text-sm border border-slate-200 group-hover:border-royal transition-all duration-300 shadow-sm"
+                  className="w-full inline-flex items-center justify-center md:justify-between gap-2 bg-slate-50 group-hover:bg-royal text-navy group-hover:text-white font-bold py-3 px-5 rounded-2xl text-xs sm:text-sm border border-slate-200 group-hover:border-royal transition-all duration-300 shadow-sm"
                 >
                   <span>{div.ctaText}</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />

@@ -51,7 +51,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left: Contact Info & Direct Channels */}
             <div className="lg:col-span-5 space-y-8">
-              <div className="space-y-3">
+              <div className="space-y-3 text-center lg:text-left">
                 <span className="text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-3.5 py-1.5 rounded-full inline-block">
                   Headquarters & Showroom
                 </span>
@@ -243,7 +243,7 @@ export default function ContactPage() {
       {/* 4. Google Maps Integration (Sultan Bathery Location) */}
       <section className="bg-white py-14 sm:py-16 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div className="flex flex-col md:flex-row items-center md:items-end text-center md:text-left justify-between gap-4 mb-8">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-royal bg-royal/10 px-3.5 py-1.5 rounded-full inline-block mb-2">
                 Visit Our Center
@@ -251,7 +251,7 @@ export default function ContactPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-navy font-heading">
                 Our Location in Sultan Bathery
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl mx-auto md:mx-0">
                 {COMPANY_INFO.address.full}
               </p>
             </div>
