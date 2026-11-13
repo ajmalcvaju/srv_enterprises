@@ -857,11 +857,11 @@ export const PREMIUM_CLIENTS: ClientPartner[] = [
     logoImage: "/images/clients/client-wayanad-police.png",
   },
   {
-    name: "VIMS Hospitals",
+    name: "WIMS Hospital",
     category: "Dr. Moopen's Medical College & Hospital",
     badge: "Healthcare Leader",
     location: "Meppadi, Wayanad",
-    logoImage: "/images/clients/client-vims-hospitals.png",
+    logoImage: "/images/clients/client-wims-hospitals.png",
   },
   {
     name: "Vinayaka Hospital",
