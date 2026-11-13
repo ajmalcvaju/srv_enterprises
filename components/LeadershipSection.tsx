@@ -69,7 +69,7 @@ export default function LeadershipSection() {
                 {/* Top Right: Owner # */}
                 <div className="absolute top-3 right-3 z-30">
                   <span className="bg-white/95 backdrop-blur-md text-navy text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-sm border border-slate-200">
-                    Owner #{index + 1}
+                    Owner
                   </span>
                 </div>
               </div>
