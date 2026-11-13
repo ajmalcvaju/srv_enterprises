@@ -90,22 +90,20 @@ export default function ClientsCarousel() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center md:flex-row md:items-end md:text-left justify-between mb-10 gap-6">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal/10 text-royal text-xs font-bold uppercase tracking-wider mb-3">
-              <Building2 className="w-3.5 h-3.5 text-royal" />
-              <span>Institutional &amp; Commercial Trust</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy font-heading tracking-tight">
-              Our Premium Clients
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
-              Leading hospitals, law enforcement departments, 5-star luxury resorts, educational institutions, and food enterprises rely on SRV Enterprises for certified water engineering and dependable maintenance.
-            </p>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal/10 text-royal text-xs font-bold uppercase tracking-wider mb-3">
+            <Building2 className="w-3.5 h-3.5 text-royal" />
+            <span>Institutional &amp; Commercial Trust</span>
           </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy font-heading tracking-tight">
+            Our Premium Clients
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+            Leading hospitals, law enforcement departments, 5-star luxury resorts, educational institutions, and food enterprises rely on SRV Enterprises for certified water engineering and dependable maintenance.
+          </p>
 
           {/* Carousel Navigation Buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 mt-6">
             <button
               onClick={handlePrev}
               aria-label="Previous client"
