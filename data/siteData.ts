@@ -37,7 +37,7 @@ export interface CompanyInfo {
 export const COMPANY_INFO: CompanyInfo = {
   name: "SRV ENTERPRISES",
   shortName: "SRV",
-  proprietor: "Vipin",
+  proprietor: "",
   tagline: "Pure Water. Better Living.",
   subTagline: "Sales & Service - Water Purifiers, Treatment Plants, Solar, CCTV, Inverters & Kitchen Solutions",
   experienceYears: 10,
@@ -60,7 +60,7 @@ export const COMPANY_INFO: CompanyInfo = {
     district: "Wayanad",
     state: "Kerala",
     pincode: "673592",
-    full: "Vipin SRV ENTERPRISES, EKM Building, Opposite Municipal Stadium, Mini Bypass, Sultan Bathery, Kerala - 673592",
+    full: "SRV ENTERPRISES, EKM Building, Opposite Municipal Stadium, Mini Bypass, Sultan Bathery, Kerala - 673592",
   },
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.4843251369525!2d76.2535382!3d11.6600483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba609d565df94ab%3A0x63de9bdc4621a587!2sSRV%20ENTERPRISES%20WATER%20PURIFIER%20%2CSOLAR%20WATER%20HEATER%20SALES%26SERVICE!5e0!3m2!1sen!2sin!4v1794292422428!5m2!1sen!2sin",

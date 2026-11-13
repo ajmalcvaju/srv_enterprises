@@ -75,7 +75,7 @@ export default function ContactPage() {
                       Business & Workshop Address
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-                      <span className="font-bold text-navy">{COMPANY_INFO.proprietor} - {COMPANY_INFO.name}</span><br />
+                      <span className="font-bold text-navy">{COMPANY_INFO.name}</span><br />
                       {COMPANY_INFO.address.building}, {COMPANY_INFO.address.landmark},<br />
                       {COMPANY_INFO.address.road}, {COMPANY_INFO.address.city},<br />
                       {COMPANY_INFO.address.district}, {COMPANY_INFO.address.state} - {COMPANY_INFO.address.pincode}
