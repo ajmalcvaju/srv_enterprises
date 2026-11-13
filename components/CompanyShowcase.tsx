@@ -32,10 +32,23 @@ interface MediaItem {
 
 const SHOWCASE_ITEMS: MediaItem[] = [
   {
+    id: "video-real-installation",
+    type: "video",
+    badge: "Authentic Field Footage",
+    badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+    duration: "1m 21s",
+    headline: "Live Field Installation & Handover by Certified Technicians",
+    description:
+      "Step into a real client site in Kerala. Watch our certified engineering technicians installing, calibrating, and handing over Waterman & SRV water filtration systems.",
+    mediaSrc: "/videos/company_showcase_installation.mp4",
+    posterSrc: "/videos/company_showcase_installation_poster.jpg",
+    tags: ["Real Field Footage", "Certified Installation", "1m 21s Reel"],
+  },
+  {
     id: "photo-waterman",
     type: "photo",
     badge: "Verified Client Handover",
-    badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+    badgeColor: "bg-royal/30 text-aqua border-aqua/30",
     headline: "Happy Homeowners with Royal Waterman Filtration System",
     description:
       "A complete domestic water purification setup featuring Royal Waterman RO+Alkaline unit and high-capacity iron-removal filtration cylinder, backed by SRV certified warranty.",
@@ -144,8 +157,8 @@ export default function CompanyShowcase() {
           </Link>
         </div>
 
-        {/* 3-Card Media Showcase Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Media Showcase Grid - 4 Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {SHOWCASE_ITEMS.map((item) => {
             const isPlaying = playingVideoId === item.id;
 
