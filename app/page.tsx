@@ -24,6 +24,7 @@ import NoticeShowcase from "@/components/NoticeShowcase";
 import ProductCard from "@/components/ProductCard";
 import BrandShowcase from "@/components/BrandShowcase";
 import CompanyShowcase from "@/components/CompanyShowcase";
+import ClientsCarousel from "@/components/ClientsCarousel";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import {
   COMPANY_INFO,
@@ -104,7 +105,10 @@ export default function HomePage() {
       {/* 6. Authentic Company Footage & Customer Installation Stories */}
       <CompanyShowcase />
 
-      {/* 5. Water Troubleshooter (Symptom-to-Solution Diagnostic) */}
+      {/* 7. Our Premium Clients Carousel */}
+      <ClientsCarousel />
+
+      {/* 8. Water Troubleshooter (Symptom-to-Solution Diagnostic) */}
       <WaterTroubleshooter />
 
       {/* 6. Why Choose SRV ENTERPRISES? */}

@@ -840,6 +840,59 @@ export const SUPPORTED_BRANDS: BrandPartner[] = [
   },
 ];
 
+export interface ClientPartner {
+  name: string;
+  category: string;
+  badge: string;
+  location: string;
+  logoImage: string;
+}
+
+export const PREMIUM_CLIENTS: ClientPartner[] = [
+  {
+    name: "Wayanad Police",
+    category: "Kerala Police Department",
+    badge: "Government",
+    location: "Wayanad, Kerala",
+    logoImage: "/images/clients/client-wayanad-police.png",
+  },
+  {
+    name: "VIMS Hospitals",
+    category: "Dr. Moopen's Medical College & Hospital",
+    badge: "Healthcare Leader",
+    location: "Meppadi, Wayanad",
+    logoImage: "/images/clients/client-vims-hospitals.png",
+  },
+  {
+    name: "Vinayaka Hospital",
+    category: "Multi-Speciality Healthcare Center",
+    badge: "Hospital",
+    location: "Sulthan Bathery",
+    logoImage: "/images/clients/client-vinayaka-hospital.png",
+  },
+  {
+    name: "Mountain Shadows",
+    category: "Luxury 5-Star Nature Resort & Spa",
+    badge: "5-Star Resort",
+    location: "Wayanad, Kerala",
+    logoImage: "/images/clients/client-mountain-shadows.png",
+  },
+  {
+    name: "Navodaya Central School",
+    category: "Senior Secondary Educational Campus",
+    badge: "Education",
+    location: "Wayanad, Kerala",
+    logoImage: "/images/clients/client-navodaya-school.png",
+  },
+  {
+    name: "Grand Bake House",
+    category: "Premium Bakery & Confectionery Chain",
+    badge: "Commercial F&B",
+    location: "Kerala",
+    logoImage: "/images/clients/client-grand-bake-house.png",
+  },
+];
+
 export const TESTIMONIALS = [
   {
     id: 1,
