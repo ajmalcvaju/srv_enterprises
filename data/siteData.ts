@@ -930,6 +930,13 @@ export interface LeaderProfile {
 
 export const LEADERSHIP_TEAM: LeaderProfile[] = [
   {
+    name: "Sam Jacob",
+    role: "Co-Owner & Director",
+    title: "Director - Client Relations",
+    focus: "Spearheading commercial partnerships, institutional client relations, and sustainable expansion.",
+    image: "/images/team/sam-jacob.webp",
+  },
+  {
     name: "Rahul P R",
     role: "Co-Owner & Director",
     title: "Director - Technical Operations",
@@ -942,12 +949,5 @@ export const LEADERSHIP_TEAM: LeaderProfile[] = [
     title: "Director - Business & Operations",
     focus: "Managing business operations, field service diagnostics, and multi-brand customer support across Kerala.",
     image: "/images/team/vipin-das.webp",
-  },
-  {
-    name: "Sam Jacob",
-    role: "Co-Owner & Director",
-    title: "Director - Client Relations",
-    focus: "Spearheading commercial partnerships, institutional client relations, and sustainable expansion.",
-    image: "/images/team/sam-jacob.webp",
   },
 ];

@@ -24,7 +24,7 @@ export default function LeadershipSection() {
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-            Founded and steered by <strong>Rahul P R</strong>, <strong>Vipin Das</strong>, and <strong>Sam Jacob</strong> — the three owners whose dedication to certified engineering and genuine customer relationships defines SRV Enterprises.
+            Founded and steered by <strong>Sam Jacob</strong>, <strong>Rahul P R</strong>, and <strong>Vipin Das</strong> — the three owners whose dedication to certified engineering and genuine customer relationships defines SRV Enterprises.
           </p>
 
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700">
