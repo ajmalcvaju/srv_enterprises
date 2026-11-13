@@ -36,9 +36,9 @@ const SHOWCASE_ITEMS: MediaItem[] = [
     type: "photo",
     badge: "Verified Client Handover",
     badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-    headline: "Happy Homeowners with Waterman Filtration System",
+    headline: "Happy Homeowners with Royal Waterman Filtration System",
     description:
-      "A complete domestic water purification setup featuring Waterman RO+Alkaline unit and high-capacity iron-removal filtration cylinder, backed by SRV certified warranty.",
+      "A complete domestic water purification setup featuring Royal Waterman RO+Alkaline unit and high-capacity iron-removal filtration cylinder, backed by SRV certified warranty.",
     mediaSrc: "/images/company_showcase_photo.jpg",
     tags: ["Domestic RO + UV", "Iron Removal Filter", "Certified Installation"],
   },
