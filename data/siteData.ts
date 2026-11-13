@@ -919,3 +919,35 @@ export const TESTIMONIALS = [
     project: "RO Purifier & Kitchen Chimney",
   },
 ];
+
+export interface LeaderProfile {
+  name: string;
+  role: string;
+  title: string;
+  focus: string;
+  image: string;
+}
+
+export const LEADERSHIP_TEAM: LeaderProfile[] = [
+  {
+    name: "Rahul P R",
+    role: "Co-Owner & Director",
+    title: "Director - Technical Operations",
+    focus: "Leading turnkey water treatment plant engineering, system calibration, and technical operations.",
+    image: "/images/team/rahul-pr.webp",
+  },
+  {
+    name: "Vipin Das",
+    role: "Co-Owner & Director",
+    title: "Director - Business & Operations",
+    focus: "Managing business operations, field service diagnostics, and multi-brand customer support across Kerala.",
+    image: "/images/team/vipin-das.webp",
+  },
+  {
+    name: "Sam Jacob",
+    role: "Co-Owner & Director",
+    title: "Director - Client Relations",
+    focus: "Spearheading commercial partnerships, institutional client relations, and sustainable expansion.",
+    image: "/images/team/sam-jacob.webp",
+  },
+];

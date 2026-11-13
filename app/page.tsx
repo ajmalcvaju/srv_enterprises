@@ -25,6 +25,7 @@ import ProductCard from "@/components/ProductCard";
 import BrandShowcase from "@/components/BrandShowcase";
 import CompanyShowcase from "@/components/CompanyShowcase";
 import ClientsCarousel from "@/components/ClientsCarousel";
+import LeadershipSection from "@/components/LeadershipSection";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import {
   COMPANY_INFO,
@@ -108,7 +109,10 @@ export default function HomePage() {
       {/* 7. Our Premium Clients Carousel */}
       <ClientsCarousel />
 
-      {/* 8. Water Troubleshooter (Symptom-to-Solution Diagnostic) */}
+      {/* 8. The Leadership Behind SRV Enterprises */}
+      <LeadershipSection />
+
+      {/* 9. Water Troubleshooter (Symptom-to-Solution Diagnostic) */}
       <WaterTroubleshooter />
 
       {/* 6. Why Choose SRV ENTERPRISES? */}
