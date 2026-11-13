@@ -40,39 +40,35 @@ export default function LeadershipSection() {
               key={leader.name}
               className="group bg-white rounded-3xl border border-slate-200/90 shadow-soft hover:shadow-elevated hover:border-royal/40 transition-all duration-300 flex flex-col justify-between overflow-hidden text-center md:text-left"
             >
-              {/* Leader Photo Header */}
-              <div className="relative h-80 sm:h-88 w-full bg-slate-900 overflow-hidden flex items-center justify-center">
-                {/* Blurred ambient background */}
+              {/* Leader Photo Header - Full View */}
+              <div className="relative h-80 sm:h-96 w-full bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100/90 overflow-hidden flex items-center justify-center p-4">
+                {/* Subtle blurred ambient backdrop */}
                 <img
                   src={leader.image}
                   alt=""
                   aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover blur-xl opacity-30 scale-110 pointer-events-none"
+                  className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-20 scale-125 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent z-10" />
 
-                {/* Main Portrait */}
+                {/* Sharp 100% Fully Visible Uncropped Portrait */}
                 <img
                   src={leader.image}
                   alt={`${leader.name} - Co-Owner of SRV Enterprises`}
-                  className="relative z-20 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                  className="relative z-20 max-h-full max-w-full object-contain rounded-2xl shadow-md border border-white/80 transform group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
 
                 {/* Top Badge: Founding Owner */}
-                <div className="absolute top-4 left-4 z-30">
-                  <span className="bg-navy/90 backdrop-blur-md text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider border border-white/20 shadow-sm inline-flex items-center gap-1">
+                <div className="absolute top-3 left-3 z-30">
+                  <span className="bg-navy/90 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/20 shadow-sm inline-flex items-center gap-1">
                     <ShieldCheck className="w-3 h-3 text-aqua" />
                     <span>Founding Owner</span>
                   </span>
                 </div>
 
-                {/* Bottom Overlay Pill on Photo */}
-                <div className="absolute bottom-4 left-4 right-4 z-30 flex items-center justify-between">
-                  <span className="bg-royal/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-xl shadow-md">
-                    {leader.role}
-                  </span>
-                  <span className="bg-white/90 backdrop-blur-md text-navy text-[11px] font-extrabold px-2.5 py-1 rounded-lg shadow-sm">
+                {/* Top Right: Owner # */}
+                <div className="absolute top-3 right-3 z-30">
+                  <span className="bg-white/95 backdrop-blur-md text-navy text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-sm border border-slate-200">
                     Owner #{index + 1}
                   </span>
                 </div>
@@ -81,11 +77,16 @@ export default function LeadershipSection() {
               {/* Leader Info Content */}
               <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
                 <div>
+                  <div className="inline-flex items-center gap-1.5 bg-royal/10 text-royal text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    <Award className="w-3 h-3 text-royal" />
+                    <span>{leader.role}</span>
+                  </div>
+
                   <h3 className="text-2xl font-black text-navy font-heading group-hover:text-royal transition-colors">
                     {leader.name}
                   </h3>
 
-                  <div className="text-xs font-bold text-royal tracking-wide mt-1 mb-3">
+                  <div className="text-xs font-bold text-slate-500 tracking-wide mt-1 mb-3">
                     {leader.title}
                   </div>
 
