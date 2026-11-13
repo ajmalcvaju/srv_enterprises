@@ -38,7 +38,7 @@ export const COMPANY_INFO: CompanyInfo = {
   name: "SRV ENTERPRISES",
   shortName: "SRV",
   proprietor: "",
-  tagline: "Pure Water. Better Living.",
+  tagline: "A Sign Of Good Water.",
   subTagline: "Sales & Service - Water Purifiers, Treatment Plants, Solar, CCTV, Inverters & Kitchen Solutions",
   experienceYears: 10,
   customersCount: 10000,
@@ -800,7 +800,7 @@ export interface BrandPartner {
 export const SUPPORTED_BRANDS: BrandPartner[] = [
   {
     name: "Royal Waterman",
-    category: "A Made of Royal Service",
+    category: "A Sign of Good Water",
     logoImage: "/images/brand-royal-waterman.png",
   },
   {
