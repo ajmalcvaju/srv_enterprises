@@ -26,6 +26,7 @@ import BrandShowcase from "@/components/BrandShowcase";
 import CompanyShowcase from "@/components/CompanyShowcase";
 import ClientsCarousel from "@/components/ClientsCarousel";
 import LeadershipSection from "@/components/LeadershipSection";
+import FaqSection from "@/components/FaqSection";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import {
   COMPANY_INFO,
@@ -331,7 +332,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. Premium CTA Section (Exact copy as requested in prompt) */}
+      {/* 10. Frequently Asked Questions (FAQ with Schema.org FAQPage) */}
+      <FaqSection />
+
+      {/* 11. Premium CTA Section (Exact copy as requested in prompt) */}
       <section className="py-20 bg-gradient-navy text-white relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-aqua/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
