@@ -173,7 +173,7 @@ export default function AboutPage() {
                     Verified Company Notice & Guarantee
                   </span>
                   <span className="text-[11px] text-slate-500">
-                    Sultan Bathery, Wayanad (CRM: srventerprisesindia.com)
+                    Sultan Bathery, Wayanad (CRM: srventerprisesgroup.com)
                   </span>
                 </div>
               </div>

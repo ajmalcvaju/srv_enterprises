@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: "/crm",
+        destination: "https://srventerprisesgroup.com",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
