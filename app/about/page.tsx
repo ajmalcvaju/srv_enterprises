@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: "About Us | 10+ Years of Engineering Excellence",
   description:
     "Learn about SRV ENTERPRISES - 10+ Years of Experience & 10,000+ Customers. Established water purification and treatment specialists based in Sultan Bathery, Wayanad, Kerala.",
+  alternates: {
+    canonical: "https://www.srventerprisesindia.com/about",
+  },
 };
 
 export default function AboutPage() {
@@ -170,7 +173,7 @@ export default function AboutPage() {
                     Verified Company Notice & Guarantee
                   </span>
                   <span className="text-[11px] text-slate-500">
-                    Sultan Bathery, Wayanad (CRM: srventerprisesgroup.com)
+                    Sultan Bathery, Wayanad (CRM: srventerprisesindia.com)
                   </span>
                 </div>
               </div>

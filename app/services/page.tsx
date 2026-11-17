@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "Services | Water Purifiers, CCTV, Solar, Inverters & Kitchen Engineering",
   description:
     "Explore our professional services: Water Purifier Installation & Multi-Brand AMC, Water Treatment Plants (WTP), 24/7 CCTV Setup, Solar Water Heaters, Solar Power, Inverters & Batteries, and Kitchen Chimneys & Hobs in Kerala. 10+ Years of Experience, 10,000+ Customers.",
+  alternates: {
+    canonical: "https://www.srventerprisesindia.com/services",
+  },
 };
 
 export default function ServicesPage() {

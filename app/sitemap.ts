@@ -1,21 +1,22 @@
 import { MetadataRoute } from "next";
+import { PRODUCTS } from "@/data/siteData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://srventerprisesgroup.com";
+  const baseUrl = "https://www.srventerprisesindia.com";
   const currentDate = new Date();
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/products`,
       lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "daily",
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/services`,
@@ -24,16 +25,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/products`,
+      url: `${baseUrl}/about`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.85,
     },
   ];
+
+  // Dynamic Product Pages for SEO indexing
+  const productPages: MetadataRoute.Sitemap = PRODUCTS.map((product) => ({
+    url: `${baseUrl}/products/${product.id}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...productPages];
 }

@@ -4,26 +4,48 @@ import ClientLayout from "@/components/ClientLayout";
 import { COMPANY_INFO } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://srventerprisesgroup.com"),
+  metadataBase: new URL("https://www.srventerprisesindia.com"),
   title: {
-    default: "SRV ENTERPRISES | Water Purifiers & Water Treatment Plants | 10+ Years Experience",
+    default: "SRV ENTERPRISES | Water Purifiers, Water Treatment Plants, Solar, CCTV & SS Tanks",
     template: "%s | SRV ENTERPRISES",
   },
   description:
-    "SRV ENTERPRISES - 10+ Years of Experience & 10,000+ Customers. Specialists in Domestic Water Purifiers, Commercial RO Plants, Whole-House Water Treatment Plants, Solar Water Heaters & CCTV Surveillance in Sultan Bathery, Wayanad, Kerala.",
+    "SRV ENTERPRISES - 10+ Years Experience & 10,000+ Customers. Kerala's trusted destination for Water Purifiers (RO+UV+Alkaline), Commercial Water Treatment Plants, Solar Panels & Heaters, CCTV Cameras, Power Inverters & Batteries, Electric Kitchen Chimneys & SS Water Tanks in Sultan Bathery, Wayanad.",
   keywords: [
     "SRV ENTERPRISES",
-    "Water Purifier Sultan Bathery",
-    "Water Treatment Plant Wayanad",
-    "RO Plant Kerala",
-    "Commercial Water Purification",
-    "Industrial Water Treatment Plant",
-    "Iron Removal Filter",
-    "Water Softener System",
-    "Solar Water Heater with SS Tank",
-    "CCTV Camera Installation Sultan Bathery",
-    "Pure Drops RO",
-    "Kent Water Purifier Service",
+    "water purifiers",
+    "water purifier sultan bathery",
+    "water purifier wayanad",
+    "best water purifier in kerala",
+    "domestic ro water purifier",
+    "alkaline water purifier",
+    "water treatment plants",
+    "water treatment plant wayanad",
+    "commercial ro plant kerala",
+    "industrial water treatment plant",
+    "iron removal filter kerala",
+    "water softener system wayanad",
+    "frp filtration vessel",
+    "solar panels and heater",
+    "solar water heater with ss tank",
+    "solar power plant wayanad",
+    "supreme solar water heater",
+    "cctv cameras",
+    "cctv camera installation sultan bathery",
+    "hikvision cctv camera wayanad",
+    "dahua cctv surveillance kerala",
+    "inverters and batteries",
+    "home inverter and battery kerala",
+    "tubular solar battery wayanad",
+    "pure sine wave inverter",
+    "electric chimneys",
+    "auto clean kitchen chimney wayanad",
+    "faber electric chimney",
+    "ss water tanks",
+    "stainless steel water tank kerala",
+    "food grade ss 304 water tank",
+    "water purifier service sultan bathery",
+    "ro plant maintenance kerala",
   ],
   authors: [{ name: "SRV ENTERPRISES" }],
   creator: "SRV ENTERPRISES",
@@ -33,26 +55,29 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: "https://www.srventerprisesindia.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://srventerprisesgroup.com",
+    url: "https://www.srventerprisesindia.com",
     siteName: "SRV ENTERPRISES",
-    title: "SRV ENTERPRISES | 10+ Years of Experience | 10,000+ Customers",
+    title: "SRV ENTERPRISES | Water Purifiers, Treatment Plants, Solar & Security in Kerala",
     description:
-      "Advanced Water Purification & Treatment Solutions. Domestic RO, Commercial Plants, Solar Energy & Home Solutions in Sultan Bathery, Wayanad, Kerala.",
+      "10+ Years Experience, 10,000+ Satisfied Customers. High-capacity Water Purifiers, Commercial RO Plants, Solar Water Heaters, CCTV Cameras, Inverters & SS Tanks in Sultan Bathery, Wayanad.",
     images: [
       {
         url: "/images/srv-notice-brochure.webp",
         width: 1200,
         height: 630,
-        alt: "SRV ENTERPRISES - Water Purifiers & Treatment Plants",
+        alt: "SRV ENTERPRISES - Water Purifiers, Treatment Plants & Home Engineering",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SRV ENTERPRISES | Water Purification & Treatment Solutions",
+    title: "SRV ENTERPRISES | Water Purifiers, RO Plants, Solar & CCTV Kerala",
     description:
       "10+ Years of Experience, 10,000+ Customers. Water Purifiers, RO Plants, Solar Water Heaters, and CCTV in Kerala.",
     images: ["/images/srv-notice-brochure.webp"],
@@ -85,13 +110,22 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: COMPANY_INFO.name,
-    image: "https://srventerprisesgroup.com/images/srv-notice-brochure.webp",
-    telephone: COMPANY_INFO.phone,
+    "@type": "HomeAndConstructionBusiness",
+    name: "SRV ENTERPRISES",
+    alternateName: [
+      "SRV Enterprises Sultan Bathery",
+      "SRV Waterman Wayanad",
+      "SRV Enterprises India",
+      "Royal Waterman Kerala",
+    ],
+    image: "https://www.srventerprisesindia.com/images/srv-notice-brochure.webp",
+    logo: "https://www.srventerprisesindia.com/images/srv-logo-new.png",
+    telephone: ["+918593882776", "+919961892278", "+917559039104"],
     email: COMPANY_INFO.email,
-    url: "https://srventerprisesgroup.com",
+    url: "https://www.srventerprisesindia.com",
     priceRange: "₹₹",
+    description:
+      "SRV ENTERPRISES is Kerala's trusted engineering provider for Domestic & Commercial Water Purifiers, Turnkey Water Treatment Plants, Solar Panels & Heaters, CCTV Security Systems, Inverters & Batteries, Electric Kitchen Chimneys, and Stainless Steel (SS) Water Tanks.",
     address: {
       "@type": "PostalAddress",
       streetAddress: `${COMPANY_INFO.address.building}, ${COMPANY_INFO.address.landmark}, ${COMPANY_INFO.address.road}`,
@@ -104,6 +138,83 @@ export default function RootLayout({
       "@type": "GeoCoordinates",
       latitude: "11.6600483",
       longitude: "76.2535382",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Sultan Bathery" },
+      { "@type": "AdministrativeArea", name: "Wayanad" },
+      { "@type": "AdministrativeArea", name: "Kalpetta" },
+      { "@type": "AdministrativeArea", name: "Mananthavady" },
+      { "@type": "AdministrativeArea", name: "Meppadi" },
+      { "@type": "AdministrativeArea", name: "Kozhikode" },
+      { "@type": "AdministrativeArea", name: "Kannur" },
+      { "@type": "AdministrativeArea", name: "Malappuram" },
+      { "@type": "AdministrativeArea", name: "Kerala" },
+      { "@type": "AdministrativeArea", name: "Nilgiris, Tamil Nadu" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Engineering Solutions & Systems",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Water Purifiers",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Domestic RO Water Purifiers" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Alkaline Water Purifier Systems" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "UV & UF Water Filtration" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Water Treatment Plants",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial & Industrial RO Plants (250 - 10000 LPH)" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Iron Removal Filtration Vessels" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Softener Systems" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sediment & Carbon Filtration Plants" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Solar Panels & Solar Water Heaters",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Supreme Solar Water Heaters with SS Tanks" } },
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Rooftop Solar Power Systems" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "CCTV Cameras & Surveillance",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "HD Night-Vision CCTV Camera Systems" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hikvision, Dahua & CP Plus Security Installation" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Inverters and Batteries",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Pure Sine Wave Inverters" } },
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Heavy-Duty Tubular Solar Batteries" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Electric Chimneys & Hobs",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Auto-Clean Kitchen Chimneys" } },
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Built-in Gas Hobs & Ventilation" } },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Stainless Steel (SS) Water Tanks",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Food-Grade SS 304 Water Tanks" } },
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "SS 316 Commercial Grade Water Storage Tanks" } },
+          ],
+        },
+      ],
     },
     openingHoursSpecification: [
       {
@@ -120,7 +231,11 @@ export default function RootLayout({
         closes: "19:30",
       },
     ],
-    sameAs: [COMPANY_INFO.crmUrl],
+    sameAs: [
+      "https://www.facebook.com",
+      "https://www.instagram.com",
+      COMPANY_INFO.crmUrl,
+    ],
   };
 
   return (

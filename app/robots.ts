@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://srventerprisesgroup.com/sitemap.xml",
+    sitemap: "https://www.srventerprisesindia.com/sitemap.xml",
   };
 }

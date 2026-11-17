@@ -39,12 +39,18 @@ export function generateMetadata({ params }: ProductDetailsPageProps): Metadata 
     };
   }
 
+  const pageUrl = `https://www.srventerprisesindia.com/products/${product.id}`;
+
   return {
     title: `${product.name} | ${product.categoryLabel}`,
     description: `${product.tagline}. ${product.description}`,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title: `${product.name} | SRV ENTERPRISES`,
       description: product.description,
+      url: pageUrl,
       images: [
         {
           url: product.image,
@@ -62,6 +68,30 @@ export default function ProductDetailsPage({ params }: ProductDetailsPageProps) 
     notFound();
   }
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: `https://www.srventerprisesindia.com${product.image}`,
+    description: `${product.tagline}. ${product.description}`,
+    brand: {
+      "@type": "Brand",
+      name: "SRV ENTERPRISES / Royal Waterman",
+    },
+    category: product.categoryLabel,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: "12000",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "SRV ENTERPRISES",
+        url: "https://www.srventerprisesindia.com",
+      },
+    },
+  };
+
   const sameCategoryProducts = PRODUCTS.filter(
     (item) => item.category === product.category && item.id !== product.id
   );
@@ -76,6 +106,11 @@ export default function ProductDetailsPage({ params }: ProductDetailsPageProps) 
 
   return (
     <div className="flex flex-col w-full bg-surface-light">
+      {/* Product JSON-LD Schema for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* 1. Breadcrumb Navigation */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-3">

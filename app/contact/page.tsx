@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Contact Us | Head Office Sultan Bathery, Wayanad",
   description:
     "Contact SRV ENTERPRISES in Sultan Bathery, Wayanad, Kerala. Phone: +91 85938 82776, Email: srventerprises78@gmail.com. Free water testing and quotation for water purifiers and treatment plants.",
+  alternates: {
+    canonical: "https://www.srventerprisesindia.com/contact",
+  },
 };
 
 export default function ContactPage() {
